@@ -6,7 +6,7 @@ import ImageGallery from '../components/AboutPage/ImageGallery';
 const About = () => {
   return (
     <div>
-      <div className="bradcam_area breadcam_bg">
+      <div className="bradcam_area breadcam_bg mt">
       <h3>About Montana</h3>
     </div>
     <AboutSection/>

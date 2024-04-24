@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Blog = () => {
-  // Define an array of blog items
   const blogItems = [
     {
       imageUrl: "/blog/1.jpg",
@@ -78,16 +77,12 @@ const Blog = () => {
     },
     // Add more items as needed
   ];
-  
 
   return (
     <section className="blog-section spad">
-    <div className='bradcam_area mt breadcam_bg_3 text-center'>
-  
-  <h3>Blogs</h3>
-
-
-  </div>
+      <div className='bradcam_area mt breadcam_bg_3 text-center'>
+        <h3>Blogs</h3>
+      </div>
       <div className="container py-5">
         <div className="row">
           <div className="col-lg-12">
@@ -97,7 +92,6 @@ const Blog = () => {
           </div>
         </div>
         <div className="row">
-          {/* Map over the array of blog items */}
           {blogItems.map((item, index) => (
             <BlogItem
               key={index}
@@ -119,11 +113,11 @@ const Blog = () => {
 const BlogItem = ({ imageUrl, tag, title, date, link, subtitle }) => {
   const imageStyle = {
     backgroundImage: `url(${imageUrl})`,
-    width: '400px',
-    height: '500px',
     backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '400px',
     position: 'relative',
-    transition: 'filter 0.3s ease', // Add transition for smooth effect
+    transition: 'filter 0.3s ease',
   };
 
   const overlayStyle = {
@@ -131,52 +125,42 @@ const BlogItem = ({ imageUrl, tag, title, date, link, subtitle }) => {
     bottom: '0',
     left: '0',
     width: '100%',
-    height:"160px",
+    height: '160px',
     backdropFilter: 'blur(3px)',
     padding: '20px',
     backgroundColor: 'rgba(0, 0, 0, 0.2)',
     color: '#fff',
-    transition: 'background-color 0.3s ease', // Add transition for smooth effect
+    transition: 'background-color 0.3s ease',
   };
 
-  // Define hover styles
-  const hoverOverlayStyle = {
-    ...overlayStyle,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)', // Darken the overlay on hover
-  };
-
-  // Handle hover effect
   const handleHover = (event) => {
-    event.currentTarget.style.filter = 'brightness(70%)'; // Darken the image on hover
-    event.currentTarget.querySelector('.overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.6)'; // Darken the overlay on hover
+    event.currentTarget.style.filter = 'brightness(70%)';
+    event.currentTarget.querySelector('.overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
   };
 
-  // Handle mouse leave
   const handleMouseLeave = (event) => {
-    event.currentTarget.style.filter = 'brightness(100%)'; // Reset image brightness on mouse leave
-    event.currentTarget.querySelector('.overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.2)'; // Reset overlay color on mouse leave
+    event.currentTarget.style.filter = 'brightness(100%)';
+    event.currentTarget.querySelector('.overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
   };
 
   return (
-    <>
-     
-          <div 
-      className="col-lg-4 py-4 rounded-3" 
-      style={{ overflow: 'hidden' }} 
-      onMouseEnter={handleHover} 
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="blog-item" style={imageStyle}>
+    <div className="col-lg-4 col-md-6 mb-4">
+      <div
+        className="blog-item rounded-3"
+        style={imageStyle}
+        onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="overlay" style={overlayStyle}>
-          <span className="b-tag bg-danger p-2 rounded-3">{tag}</span>
-          <h3 className='mt-3'><a href={link} style={{ color: '#fff' }}>{title}</a></h3>
-          <h6 className='text-gray'>{subtitle}</h6>
+          <span className="b-tag bg-white text-black p-2 rounded-2">{tag}</span>
+          <h3 className="mt-3">
+            <a href={link} style={{ color: '#fff' }}>{title}</a>
+          </h3>
+          <h6 className="text-gray">{subtitle}</h6>
           <div className="b-time"><i className="icon_clock_alt"></i> {date}</div>
         </div>
       </div>
     </div>
-    </>
-
   );
 };
 

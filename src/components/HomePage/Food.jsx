@@ -5,8 +5,8 @@ const Food = () => {
   return (
     <div className='about_area'>
       <div className='container'>
-        <div className='row'>
-          <div className='col-xl-7 col-lg-7'>
+        <div className='row align-items-center'>
+          <div className='col-lg-7'>
             <div className='about_thumb2 d-flex'>
               <div className='img_1'>
                 <img src='/about/1.png' alt='' />
@@ -16,7 +16,7 @@ const Food = () => {
               </div>
             </div>
           </div>
-          <div className='col-xl-5 col-lg-5'>
+          <div className='col-lg-5'>
             <div className='about_info'>
               <div className='section_title mb-20px'>
                 <span>Delicious Food</span>
@@ -31,7 +31,7 @@ const Food = () => {
                 sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et.
                 Rhoncus.
               </p>
-              <Link href='/contact' className="btn">
+              <Link to='/contact' className="btn">
                 Learn More
               </Link>
             </div>

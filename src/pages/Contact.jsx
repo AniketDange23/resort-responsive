@@ -4,7 +4,7 @@ import ContactForm from "../components/ContactPage/ContactForm";
 const Contact = () => {
   return (
     <div>
-      <div className='bradcam_area breadcam_bg_1 text-center'>
+      <div className='bradcam_area  mt breadcam_bg_1 text-center'>
       <div >
       <h3>Get In Touch</h3>
 

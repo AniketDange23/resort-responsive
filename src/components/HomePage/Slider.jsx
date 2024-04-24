@@ -4,10 +4,10 @@ import "aos/dist/aos.css";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import sliderBg1 from "/1.jpg"; // Import your background images
-import sliderBg2 from "/2.jpg";
-import sliderBg3 from "/3.jpg";
-import sliderBg4 from "/4.jpg";
+import sliderBg1 from "/blog/1.jpg"; // Import your background images
+import sliderBg2 from "/blog/2.jpg";
+import sliderBg3 from "/blog/3.jpg";
+import sliderBg4 from "/blog/4.jpg";
 
 function Slider() {
   useEffect(() => {
