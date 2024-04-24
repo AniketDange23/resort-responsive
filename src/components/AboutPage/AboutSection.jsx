@@ -5,13 +5,13 @@ function AboutSection() {
   return (
     <div className='about_area'>
       <div className='container'>
-        <div className='row align-items-center'>
-          <div className='col-lg-5'>
+        <div className='row'>
+          <div className='col-xl-5 col-lg-5'>
             <div className='about_info'>
               <div className='section_title mb-20px'>
                 <span>About US</span>
                 <h3>
-                  A Luxurious <b>Resort</b> with Nature
+                  A Luxuries <b> Resort</b> with Nature
                 </h3>
               </div>
               <p>
@@ -26,13 +26,13 @@ function AboutSection() {
               </Link>
             </div>
           </div>
-          <div className='col-lg-7'>
-            <div className='about_thumb'>
+          <div className='col-xl-6 col-lg-6 col-md-5'>
+            <div className='about_thumb d-flex'>
               <div className='img_1'>
-                <img src='/image1.jpg' alt='' />
+                <img src='/image1.jpg' className=" img-fluid" alt='' />
               </div>
               <div className='img_2'>
-                <img src='/image2.jpg' alt='' />
+                <img src='/image2.jpg ' className="img-fluid" alt='' />
               </div>
             </div>
           </div>
