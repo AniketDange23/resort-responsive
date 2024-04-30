@@ -3,37 +3,43 @@ import { Link } from "react-router-dom";
 
 function AboutSection() {
   return (
-    <div className='about_area'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-xl-5 col-lg-5'>
-            <div className='about_info'>
-              <div className='section_title mb-20px'>
-                <span>About US</span>
-                <h3>
-                  A Luxuries <b> Resort</b> with Nature
-                </h3>
+    <div className="about_area">
+      <div className="container">
+        <div className="row  justify-content-center">
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-5">
+            <div className="about_thumb">
+              <div className="img_1">
+                <img
+                  src="/about/about.jpg"
+                  className="img-fluid "
+                  alt=""
+                />
               </div>
-              <p>
-                Suscipit libero pretium nullam potenti. Interdum, blandit
-                phasellus consectetuer dolor ornare dapibus enim ut tincidunt
-                rhoncus tellus sollicitudin pede nam maecenas, dolor sem. Neque
-                sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et.
-                Rhoncus.
-              </p>
-              <Link to='/contact' className='btn mb-3'>
-                Learn More
-              </Link>
             </div>
           </div>
-          <div className='col-xl-6 col-lg-6 col-md-5'>
-            <div className='about_thumb d-flex'>
-              <div className='img_1'>
-                <img src='/image1.jpg' className=" img-fluid" alt='' />
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div className="about_info px-5">
+              <div className="section_title mb-5">
+                <h1>Welcome to Mauli Agro Tourism</h1>
               </div>
-              <div className='img_2'>
-                <img src='/image2.jpg ' className="img-fluid" alt='' />
-              </div>
+              <p>
+                A home away from home. We welcome you to relive village life in
+                the lap of nature, away from the hustle and bustle of the city. A
+                perfect weekend getaway from <b>Mumbai to Thane @ 115 Km or 2.20
+                Hrs drive.</b>
+              Mauli Agro Tourism is 7.5 acres of land located at Varor
+                Village, Dahanu in Palghar district. (On Boisar- Dahanu Road
+                near Chinchani Village) The land was mainly purchased for
+                preservation and protection of trees, flora and fauna, to
+                protect Mother Nature’s blessings and by enhancing the greenery
+                and its biodiversity. </p>
+               
+              <button>
+                  <Link to="/contact" >
+                Learn More
+              </Link>
+              </button>
+            
             </div>
           </div>
         </div>

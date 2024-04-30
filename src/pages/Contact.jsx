@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "../components/ContactPage/ContactForm";
+import ContactSection from "../components/ContactPage/ContactSection";
 
 const Contact = () => {
   return (
@@ -10,6 +11,7 @@ const Contact = () => {
 
       </div>
       </div>
+      <ContactSection/>
       <ContactForm />
     </div>
   );

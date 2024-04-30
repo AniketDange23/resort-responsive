@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { FaBars } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import './header.css';
+import { HiOutlineBars3 } from "react-icons/hi2";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -17,14 +17,14 @@ function Header() {
 
   return (
     <nav className={`navbar navbar-expand-lg mt g-0  ${isNavOpen ? 'open' : ''}`}>
-      <div className="container-fluid   text-center justify-content-between align-content-center ">
+      <div className="container-fluid flex-end  ">
         <Link className="navbar-brand" to="/" onClick={closeNav}>
           Navbar
         </Link>
-        <button className="navbar-toggler border border-0" type="button" onClick={toggleNav}>
-          <FaBars className="navbar-toggler-icon ms-2"/>  
+        <button className="navbar-toggler " type="button" onClick={toggleNav}>
+          <span className="navbar-toggler-icon ms-2"></span>
         </button>
-        <div className={`collapse navbar-collapse ${isNavOpen ? "show" : ""}`} id="navbarNav">
+        <div className={`collapse navbar-collapse justify-content-end ${isNavOpen ? "show" : ""}`} id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/" onClick={closeNav}>
@@ -32,8 +32,8 @@ function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname === '/rooms' ? 'active' : ''}`} to="/rooms" onClick={closeNav}>
-                Rooms
+              <Link className={`nav-link ${location.pathname === '/accommodation' ? 'active' : ''}`} to="/accommodation" onClick={closeNav}>
+              Accommodation
               </Link>
             </li>
             <li className="nav-item">
@@ -42,8 +42,9 @@ function Header() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`} to="/blog" onClick={closeNav}>
-                Blog
+              <Link className={`nav-link ${location.pathname === '/activities' ? 'active' : ''}`} to="/activities" onClick={closeNav}>
+              Activities
+
               </Link>
             </li>
             <li className="nav-item">
@@ -52,7 +53,7 @@ function Header() {
               </Link>
             </li>
           </ul>
-          <button className="btn">
+          <button className="contact-btn">
             <Link to="/contact" onClick={closeNav}>Book Now</Link>
           </button>
         </div>       

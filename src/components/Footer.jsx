@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookSquare, FaTwitter, FaInstagram } from 'react-icons/fa'; // Import icons from react-icons
+import { CiLocationOn } from 'react-icons/ci';
 
 function Footer() {
   return (
@@ -11,14 +12,14 @@ function Footer() {
             <div className="col-xl-3 col-md-6 col-lg-3">
               <div className="footer_widget">
                 <h3 className="footer_title">Address</h3>
-                <p className="footer_text">200, Green road, Mongla, <br />New Yor City USA</p>
+                <p className="footer_text" > <CiLocationOn/> Mahuli, Parshivni, Maharashtra 441105</p>
                 <Link to="#" >Get Direction</Link>
               </div>
             </div>
             <div className="col-xl-3 col-md-6 col-lg-3">
               <div className="footer_widget">
                 <h3 className="footer_title">Reservation</h3>
-                <p className="footer_text">+10 367 267 2678 <br />reservation@montana.com</p>
+                <p className="footer_text"> 8668440938. <br />mauliagro@gmail.com.com</p>
               </div>
             </div>
             <div className="col-xl-2 col-md-6 col-lg-2">

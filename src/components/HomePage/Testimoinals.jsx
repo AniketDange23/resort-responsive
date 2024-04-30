@@ -62,15 +62,11 @@ const Testimonials = () => {
                 loop
                 margin={10}
                 autoplay
-                autoplayTimeout={5000}
+                autoplayTimeout={2000}
                 nav
-                dots
+                
                 navText={[<FaArrowLeft />, <FaArrowRight />]}
-                responsive={{
-                  0: { items: 1 },
-                  768: { items: 2 },
-                  992: { items: 3 },
-                }}
+              
               >
                 {testimonialData.map((testimonial, index) => (
                   <div className='ts-item' key={index}>
