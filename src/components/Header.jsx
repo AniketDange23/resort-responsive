@@ -30,20 +30,26 @@ function Header() {
               <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/" onClick={closeNav}>
                 Home
               </Link>
+            </li>  <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about" onClick={closeNav}>
+                About
+              </Link>
             </li>
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/accommodation' ? 'active' : ''}`} to="/accommodation" onClick={closeNav}>
               Accommodation
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about" onClick={closeNav}>
-                About
-              </Link>
-            </li>
+          
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/activities' ? 'active' : ''}`} to="/activities" onClick={closeNav}>
               Activities
+
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/package' ? 'active' : ''}`} to="/package" onClick={closeNav}>
+              Packages
 
               </Link>
             </li>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowCircleUp } from 'react-icons/fa';
 import './backtoTop.css'; // Import CSS file for styling
+import {  BiUpArrowAlt } from 'react-icons/bi';
 
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +29,7 @@ const BackToTopButton = () => {
 
   return (
     <div className={`back-to-top-btn ${isVisible ? 'show' : ''}`} onClick={scrollToTop}>
-<img src="up-arrow.gif" alt="" className="icon"  />    </div>
+<BiUpArrowAlt className="icon"/>   </div>
   );
 };
 

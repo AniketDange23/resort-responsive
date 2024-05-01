@@ -19,13 +19,13 @@ const testimonialData = [
   {
     text: "We had a wonderful experience at Ocean Paradise Resort. The facilities were top-notch, the activities were fun, and the food was delicious. We will definitely be back!",
     author: "Michael Brown",
-    rating: 5,
+    rating: 3,
     userSrc: "./users/2.jpg", // Replace with image path
   },
   {
     text: "My visit to City Lights Museum was truly inspiring. The exhibits were well-curated and informative, and the staff was knowledgeable and friendly. A must-see for any art lover!",
     author: "Jessica Jones",
-    rating: 5,
+    rating: 4,
     userSrc: "./users/3.jpg", // Replace with image path
   },
   {
@@ -37,7 +37,7 @@ const testimonialData = [
   {
     text: "My online shopping experience at ShopEasy was seamless. Easy navigation, great selection, and fast delivery. I'll definitely be shopping there again soon!",
     author: "Jennifer Garcia",
-    rating: 5,
+    rating: 4.2,
     userSrc: "./users/5.jpg", // Replace with image path
   },
 ];
@@ -62,7 +62,7 @@ const Testimonials = () => {
                 loop
                 margin={10}
                 autoplay
-                autoplayTimeout={2000}
+                autoplayTimeout={3000}
                 nav
                 
                 navText={[<FaArrowLeft />, <FaArrowRight />]}

@@ -2,7 +2,7 @@
 
 .testimonial-section {
     padding: 60px 0;
-    background-color: #f9f9f9;
+background-image: url('/test-bg.png');
 }
 
 .section-title {
@@ -27,21 +27,22 @@
 }
 
 .testimonial-slider .ts-item {
-    background: #fff;
+    background: #0e230a65;
+    backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.108);
     transition: all 0.3s ease;
 }
 
 .testimonial-slider .ts-item:hover {
-    transform: translateY(-10px);
+    background: #000;
 }
 
 .testimonial-slider .ts-item p {
     font-size: 16px;
-    color: #666;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -59,7 +60,7 @@
 
 .testimonial-slider .ts-item .ti-author h5 {
     font-size: 18px;
-    color: #333;
+    color: #ffffff;
     margin-top: 10px;
 }
 
@@ -67,3 +68,4 @@
     max-width: 100px;
     margin-top: 20px;
 }
+
