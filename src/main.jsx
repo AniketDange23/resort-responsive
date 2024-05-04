@@ -7,9 +7,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
-import Accommodation from "./pages/Accommodation.jsx";
+// import Accommodation from "./pages/Accommodation.jsx";
 import Activities from './pages/Activities';
 import Package from "./pages/Package.jsx";
+import ImageGallery from './pages/ImageGallery';
 
 const router = createBrowserRouter([
   {
@@ -25,10 +26,10 @@ const router = createBrowserRouter([
         element: <About />,
       },
 
-      {
-        path: "/accommodation",
-        element: <Accommodation />,
-      },
+      // {
+      //   path: "/accommodation",
+      //   element: <Accommodation />,
+      // },
       {
         path: "/activities",
         element: <Activities />,
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/package",
         element: <Package />,
+      },
+      {
+        path: "/gallery",
+        element: <ImageGallery />,
       },
       {
         path: "/contact",

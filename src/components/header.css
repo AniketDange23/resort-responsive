@@ -2,8 +2,6 @@
 /* Navbar */
 .navbar {
   background: #114038;
-  backdrop-filter: blur(50px); /* Apply backdrop filter with blur effect */
-  padding: 18px;
   position: sticky;
   top: 0;
   margin: 0;
@@ -11,15 +9,12 @@
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.navbar-brand {
-  font: 1.5rem "Lora", sans-serif !important;
-  color: #ffffff; /* Set your desired brand color */
-}
 
 /* Navbar Toggle Button */
 .navbar-toggler {
   background-color: transparent;
-  border: none;
+  border: 1px solid #ecf4f3;
+  padding: 10px 15px;
 }
 
 /* Navbar Links */
@@ -33,11 +28,20 @@
   font: 1rem "Raleway", sans-serif !important;
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
+  width: max-content;
+
+}
+.navbar-toggler span{
+  border: none !important;
+
+  color: #ffffff;
 
 }
 
 /* Active Link */
 .navbar-nav .nav-link.active {
+  width: max-content;
+
   color: #ffffff;
   border-bottom: 2px solid #ffffff;
   font: 600 1.2rem "lora", sans-serif; /* Set your desired active link color */
@@ -53,9 +57,18 @@
   font:  1rem "inter", sans-serif;
 }
 /* Responsive Navbar */
-@media (max-width: 991px) {
+@media (min-width: 991px) {
   .navbar-nav {
+    align-items: center;
     margin-top: 10px; /* Adjust margin-top as needed */
     text-align: center;
   }
+ 
+}
+@media (max-width: 991px) {
+.navbar-collapse{
+  margin-top: 10px;
+  border-top: 1px solid #ffffff;
+}
+ 
 }

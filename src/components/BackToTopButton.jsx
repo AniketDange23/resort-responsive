@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import './backtoTop.css'; // Import CSS file for styling
 import {  BiUpArrowAlt } from 'react-icons/bi';
 

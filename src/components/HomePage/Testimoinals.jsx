@@ -44,71 +44,64 @@ const testimonialData = [
 
 const Testimonials = () => {
   return (
-    <section className='testimonial-section spad'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-lg-12'>
-            <div className='section-title'>
-              <span>Testimonials</span>
-              <h2>What Customers Say?</h2>
-            </div>
-          </div>
-        </div>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-12 '>
-              <OwlCarousel
-                className='testimonial-slider owl-carousel owl-theme'
-                loop
-                margin={10}
-                autoplay
-                autoplayTimeout={3000}
-                nav
-                
-                navText={[<FaArrowLeft />, <FaArrowRight />]}
-              
-              >
-                {testimonialData.map((testimonial, index) => (
-                  <div className='ts-item' key={index}>
-                    <div className=' d-flex align-items-center justify-content-center text-center mb-3'>
-                      <img
-                        src={testimonial.userSrc}
-                        alt='Testimonial Logo'
-                        style={{
-                          width: "80px",
-                          height: "80px",
-                          borderRadius: "80px",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
+    <div className='container-fluid py-3 testimonial'>
+      <div className='section-title'>
+        <h4>Testimonials</h4>
+        <h2>What Customers Say?</h2>
+      </div>
+      <div className='row'>
+        <div className='col-lg-12 '>
+          <OwlCarousel
+            className='testimonial-slider  owl-carousel owl-theme'
+            loop
+            autoplay
+            autoplayTimeout={3000}
+            dots
+            animateOut={"fadeOut"}
+            animateIn={"fadeIn"}
+            responsive={{
+              0: { items: 1 }, // Responsive settings for devices less than 768px
+              768: { items: 1 }, // Responsive settings for devices between 768px and 992px
+              992: { items: 1 }, // Responsive settings for devices between 992px and 1200px
+              1200: { items: 2 }, // Responsive settings for devices greater than 1200px
+            }}
+          >
+            {testimonialData.map((testimonial, index) => (
+              <div className='ts-item' key={index}>
+                <div className=' d-flex align-items-center justify-content-center text-center mb-3'>
+                  <img
+                    src={testimonial.userSrc}
+                    alt='Testimonial Logo'
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      borderRadius: "80px",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
 
-                    <p>{testimonial.text}</p>
-                    <div className='ti-author'>
-                      <div className='rating'>
-                        {Array.from(
-                          { length: Math.floor(testimonial.rating) },
-                          (_, i) => (
-                            <FaStar
-                              key={i}
-                              className='icon_star text-warning'
-                            />
-                          )
-                        )}
-                        {testimonial.rating % 1 !== 0 && (
-                          <FaStarHalfAlt className='icon_star-half_alt text-warning' />
-                        )}
-                      </div>
-                      <h5>{testimonial.author}</h5>
-                    </div>
+                <p>{testimonial.text}</p>
+                <div className='ti-author'>
+                  <div className='rating'>
+                    {Array.from(
+                      { length: Math.floor(testimonial.rating) },
+                      (_, i) => (
+                        <FaStar key={i} className='icon_star text-warning' />
+                      )
+                    )}
+                    {testimonial.rating % 1 !== 0 && (
+                      <FaStarHalfAlt className='icon_star-half_alt text-warning' />
+                    )}
                   </div>
-                ))}
-              </OwlCarousel>
-            </div>
-          </div>
+                  <h5>{testimonial.author}</h5>
+                </div>
+              </div>
+            ))}
+          </OwlCarousel>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,19 +1,21 @@
-import React from 'react'
-import AboutSection from '../components/AboutPage/AboutSection'
-import AboutMainInfo from './../components/AboutPage/AboutMainInfo';
-import ImageGallery from '../components/AboutPage/ImageGallery';
+import React from "react";
+import AboutSection from "../components/AboutPage/AboutSection";
+import AboutMainInfo from "./../components/AboutPage/AboutMainInfo";
+import Rooms from './../components/Accommodation/Rooms';
 
 const About = () => {
   return (
     <div>
-      <div className="bradcam_area breadcam_bg mt">
-      <h3>About Montana</h3>
-    </div>
-    <AboutSection/>
-    <AboutMainInfo/>
-    <ImageGallery/>
-    </div>
-  )
-}
+      <div className='bradcam_area breadcam_bg '>
+          <h1>About us</h1> 
+  </div>
 
-export default About
+
+      <AboutSection />
+      <AboutMainInfo />
+      <Rooms/>
+    </div>
+  );
+};
+
+export default About;

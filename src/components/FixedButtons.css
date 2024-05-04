@@ -1,0 +1,42 @@
+/* FixedButtons.css */
+.fixed-btn {
+  position: fixed;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  border-radius: 50%;
+}
+
+.fixed-btn svg {
+  font-size: 28px;
+}
+
+.call-btn {
+  bottom: 80px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  color: rgb(255, 255, 255);
+  background-color:#114038; /* Adjust color */
+}
+.call-btn:hover{
+  background-color: #eaeaea !important;
+  box-shadow: none;
+  color: rgb(0, 0, 0)!important;
+  border: 1px solid #000000;
+
+}
+
+.back-to-top-btn {
+  margin: 0;
+
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+
+  color: #3a3a3a;
+}
+
+
+.back-to-top-btn :hover{
+  background-color: #bcbcbc;
+  border: 1px solid #000000;
+}

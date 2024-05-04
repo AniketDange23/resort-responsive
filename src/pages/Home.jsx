@@ -3,8 +3,9 @@ import Food from "./../components/HomePage/Food";
 import SliderComponent from "../components/HomePage/Slider";
 import BackToTopButton from "../components/BackToTopButton";
 import Testimonials from "../components/HomePage/Testimoinals";
-import Offers from './../components/Accommodation/Offers';
 import Rooms from './../components/Accommodation/Rooms';
+import OurCollection from "../components/HomePage/OurCollection";
+import Mission from "./Mission";
 
 const Home = () => {
   return (
@@ -12,11 +13,14 @@ const Home = () => {
       <BackToTopButton />
       <SliderComponent />
       <AboutSection />
+      <Mission/>
       <Rooms/>
-      <Offers />
+      {/* <Offers /> */}
 
       <Testimonials />
       <Food />
+      <OurCollection />{/* <Video/> */}
+      
     </div>
   );
 };

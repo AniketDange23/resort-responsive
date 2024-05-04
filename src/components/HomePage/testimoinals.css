@@ -1,33 +1,22 @@
-/* testimoinals.css */
 
-.testimonial-section {
-    padding: 60px 0;
-background-image: url('/test-bg.png');
+.testimonial {
+    background-image: url('/test-bg.png');
+
 }
-
 .section-title {
     text-align: center;
     margin-bottom: 50px;
 }
 
-.section-title h2 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 10px;
-}
 
-.section-title span {
-    display: block;
-    font-size: 16px;
-    color: #777;
-}
 
 .testimonial-slider .owl-item {
     padding: 0 15px;
 }
 
 .testimonial-slider .ts-item {
-    background: #0e230a65;
+    background: #114038;
+
     backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 10px;
@@ -37,7 +26,7 @@ background-image: url('/test-bg.png');
 }
 
 .testimonial-slider .ts-item:hover {
-    background: #000;
+    background: #114038;
 }
 
 .testimonial-slider .ts-item p {

@@ -1,17 +1,14 @@
-import React from 'react'
-import { FaPlay } from 'react-icons/fa'
+import React from 'react';
 
 const Video = () => {
   return (
-    <div className="video_area video_bg overlay">
-    <div className="video_area_inner text-center">
-      <span>Montana Sea View</span>
-      <h3>Relax and Enjoy your <br /> Vacation </h3>
-      <a href="https://www.youtube.com/watch?v=vLnPwxZdW4Y" className="video_btn popup-video">
-        <FaPlay />
-      </a>
+    <div className="video_area video_bg overlay" style={{ height: '500px', width: '100%', position: 'relative', overflow: 'hidden' }}>
+      <video autoPlay loop muted className="w-100 h-100 position-absolute top-0 left-0">
+        <source src="/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
-  </div>  )
+  );
 }
 
-export default Video
+export default Video;

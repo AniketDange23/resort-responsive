@@ -3,14 +3,14 @@ import Facilities from '../components/activities/Facilities';
 
 const Activities = () => {
   return (
-    <div> <div className="bradcam_area breadcam_bg mt">
-    <h3>activities</h3>
+    <div> <div className="bradcam_area breadcam_bg ">
+    <h1>activities</h1>
     
   </div>
 
 
 <OutDoor/>
-<Facilities/>
+{/* <Facilities/> */}
   </div>
   )
 }
