@@ -1,17 +1,23 @@
 import React from "react";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
+
 import { Link } from "react-router-dom";
 
 function AboutSection() {
   return (
 
 
+<> 
 
-      <div className="container mb-2 py-5 ">
+<marquee>
+     <h4 >Welcome to Mauli Agro Tourism's Farm! <span>   Feel the Rhythm of Rural Life.</span></h4> 
+  </marquee>
+  <div className="container mb-2 py-5 ">
         <div className="row">
           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-5 order-md-1">
-            <div className="about-info">
-              <div className="section-title mb-5">
-                <h1>Make Memories that Last at Mahuli Agro Tourism!</h1>
+            <div>
+              <div className="section-title mb-4">
+                <h1 className="text-start">Make Memories that Last at Mahuli Agro Tourism!</h1>
               </div>
               <p data-aos="fade-up">
                 Welcome to Mauli Agro Tourism, where nature and culture
@@ -26,11 +32,11 @@ function AboutSection() {
                 simply a chance to unwind, Mauli Agro Tourism promises an
                 enriching escape that rejuvenates mind, body, and spirit
               </p>
-              <button>
-                <Link to="/contact" className="link">
-                  Visiting Our Farm
-                </Link>
-              </button>
+            <Link to="/contact" className="link">   <button className=" align-content-center px-3">
+               
+                  Visiting Our Farm <IoIosArrowDroprightCircle style={{fontSize:"25px"}}/>
+          
+              </button>      </Link>
             </div>
           </div>
 
@@ -41,6 +47,8 @@ function AboutSection() {
           </div>
         </div>
       </div>
+</>
+      
   );
 }
 

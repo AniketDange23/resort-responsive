@@ -1,118 +1,148 @@
-import { Link } from "react-router-dom";
-import { FaFacebookSquare, FaInstagram } from "react-icons/fa"; // Import icons from react-icons
+import { Link, useLocation } from "react-router-dom";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
-
 import { IoMail } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
-import { BsWhatsapp, BsYoutube } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
+import "./Footer.css";
 
 function Footer() {
+  const location = useLocation();
+  const currentYear = new Date().getFullYear();
+
+
   return (
-    <footer className='footer black-bg text-white'>
-      <div className='footer_top'>
-        <div className='container footer'>
-          <div className='row'>
-            <div className='col-xl-3 col-md-6 col-lg-3 pt-3'>
-              <div className='footer_widget'>
-                <h3 className='text-white'>Reservation</h3>
-                <p className='text-white'>
-                  <Link to='tel:+919307027399'>
-                    <MdLocalPhone  className="mx-2" style={{  fontSize: "24px"}}/>
-                    +91 9307027399
-                  </Link>
-                </p>
-                <p className='text-white '>
-                  <Link to=''>
-                    <IoMail className="mx-2" style={{  fontSize: "24px"}} />
-                    info@mahuliagrotourism.in
-                  </Link>
-                </p>
-                <ul className='social-icons'>
-                  <li>
-                    <Link href='#'>
-                      <FaFacebookSquare style={{ fontSize: "30px" }} />{" "}
-                    </Link>
-                    <Link href='#'>
-                      <BsWhatsapp style={{ fontSize: "30px" }} />{" "}
-                    </Link>
-                    <Link href='#'>
-                      <BsYoutube style={{ fontSize: "30px" }} />{" "}
-                    </Link>
-
-                    <Link to='#'>
-                      <FaInstagram style={{ fontSize: "30px" }} />{" "}
-                    </Link>
-                  </li>
-                </ul>{" "}
-              </div>
-            </div>
-
-            <div className='col-xl-3 col-md-6 col-lg-2 pt-3'>
-              <div className='footer_widget'>
-                <h3 className='text-white'>Navigation</h3>
-                <ul>
-                  <li>
-                    <Link to='/'>Home</Link>
-                  </li>
-                  <li>
-                    <Link to='/about'>About</Link>
-                  </li>
-                  {/* <li>
-                    <Link to='/accommodation'>Accommodation</Link>
-                  </li> */}
-                  <li>
-                    <Link to='/activities'>Activities</Link>
-                  </li>
-                  <li>
-                    <Link to='/package'>Package</Link>
-                  </li>{" "}
-                  <li>
-                    <Link to='/gallery'>Gallery</Link>
-                  </li>
-                  <li>
-                    <Link to='/Contact'>Contact</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className='col-xl-6 col-md-6 col-lg-6 pt-3'>
-              <div className='footer_widget'>
-                <h3 className='text-white '>Address</h3>
-                <p className='text-white'>
-                  {" "}
-                  <CiLocationOn /> Mahuli, Kala Fata Road, Taluka,
-                  Parshivni,Nagpur, Maharashtra 441105
-                </p>
-                <h5 className='py-2 text-white'>Get Direction</h5>
-                <div className='map-container'>
-                  <iframe
-                    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14633.674558461002!2d79.17736396595805!3d21.40723096269719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4db387d99039b%3A0x9a238b098f78571e!2sMahuli%20Agro%20Tourism!5e1!3m2!1sen!2sin!4v1714642872348!5m2!1sen!2sin'
-                    width='100%'
-                    height='250'
-                    style={{ border: "0" }}
-                    allowFullScreen=''
-                    loading='lazy'
-                    referrerPolicy='no-referrer-when-downgrade'
-                  ></iframe>
-                </div>
-              </div>
-            </div>
+    <>
+    <div className="container-fluid  footer text-white">
+      <div className="row justify-content-center">
+        <div className="col-lg-3 col-md-6 col-sm-12 p-3 text-center">
+          <img src="/logo.png" alt="" style={{ width: "100px" }} />
+          <p className="text-white py-2">
+            Embrace nature's bounty at Mahuli Agro Tourism. Where every moment
+            is a harvest of serenity.
+          </p>
+          <div className="">
+            <h4 className="text-white text-center">Social Links</h4>
+            <ul className="social-icons  ">
+              <li>
+                <a href="https://www.facebook.com/people/Mahuli-Agro-Tourism/100089468910050/">
+                  <FaFacebookSquare />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/invites/contact/?i=8uf2ngzi9ql6&amp;utm_content=uajryz8">
+                  <FaInstagram />
+                </a>
+              </li>
+              <li>
+                <a href="https://api.whatsapp.com/send?phone=+91%209307027399&text=Hello">
+                  <BsWhatsapp />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div className='container-fluid'>
-        <hr />
-        <div className='row'>
-          <div className='col-xl-12 col-md-7 col-lg-9'>
-            <p className='copy_right text-white-50 text-center'>
-              Copyright &copy;{new Date().getFullYear()} All rights reserved |
-              This template is made with{" "}
-              <i className='fa fa-heart-o' aria-hidden='true'></i> by Aniket
-            </p>
-          </div>
+
+        <div className="col-lg-3 col-md-6 col-sm-12 p-3 text-center">
+          <h3 className="text-white">Quick Links</h3>
+          <ul className="list-unstyled">
+            <li>
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/" ? "active" : ""
+                }`}
+                to="/"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/about" ? "active" : ""
+                }`}
+                to="/about"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/activities" ? "active" : ""
+                }`}
+                to="/activities"
+              >
+                Activities
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/package" ? "active" : ""
+                }`}
+                to="/package"
+              >
+                Packages
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/gallery" ? "active" : ""
+                }`}
+                to="/gallery"
+              >
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/contact" ? "active" : ""
+                }`}
+                to="/contact"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="col-lg-3 col-md-6 col-sm-12 p-3 ">
+          <h3 className="text-white">Address</h3>
+          <ul className="list-unstyled">
+            <li>
+              <Link to="mailto:info@mahuliagrotourism.in">
+                <CiLocationOn /> Mahuli, Kala Fata Road, Taluka, Parshivni,
+                Nagpur, Maharashtra 441105
+              </Link>
+            </li>
+            <li>
+              <Link to="mailto:info@mahuliagrotourism.in">
+                <IoMail className="mx-2" />
+                info@mahuliagrotourism.in
+              </Link>
+            </li>
+            <li>
+              <Link to="tel:+919307027399">
+                <MdLocalPhone className="mx-2" />
+                +91 9307027399
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+      
+     
+    </div>
+    <div className="container-fluid bottom-footer">
+      <div className="col-lg-12  text-center py-2">
+      <b>       COPYRIGHT © {currentYear} ALL RIGHTS RESERVED THIS WEBSITE DESIGN AND DEVELOPED BY ANIKET DANGE.
+</b>
+      </div>
+    </div>
+      </>
   );
 }
 

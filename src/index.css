@@ -25,7 +25,7 @@ body {
 .breadcam_bg {
   background-image: url(/section.jpg);
   width: 100%;
-  height: 250px;
+  height: 350px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,7 +38,20 @@ body {
   text-transform: uppercase;
   text-shadow: 3px 3px 3px #00000088;
 }
-/* slider text */
+
+
+marquee  {
+  color: #114038;
+  background: #d0d0d088;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 .slider_text {
   position: absolute;
@@ -54,19 +67,18 @@ body {
   padding: 30px;
   color: #ffffff!important;
   text-align: justify;
-  background: #00000034;
+  background: #00000063;
   text-shadow: 1px 5px 5px #000000;
 }
 
 /* Media queries for different devices */
-@media (min-width: 280px) and (max-width: 360px) {
+@media (min-width: 280px) and (max-width: 768px) {
  
   .slider_item{
     width: 100%;
-    height: 100px;
   }
   .slider_text{
-    width: auto;
+    width: 100%;
         font-size: 14px;
   }
 
@@ -242,29 +254,9 @@ label {
   opacity: 1;
 }
 
-
-.bg-blur {
-  
-  backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.456);
+.black-bg{
+  background-color: #137f3741!important;
 }
-
-.mb-65 {
-  margin-bottom: 67px;
-}
-
-.black-bg {
-  background: #114038 !important;
-}
-
-.white-bg {
-  background: #ffffff;
-}
-
-.gray-bg {
-  background: #f5f5f5;
-}
-
 
 
 .card {
@@ -326,66 +318,29 @@ label {
 
 /* gallery */
 
-/* AboutSection.css */
-
-/* Add any additional styling here */
-
-.about-section {
-  position: relative;
+/*hover */
+.card-hover:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
-.about-bg {
+
+/* form */ 
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
   width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  box-shadow:  1px 1px 3px #0000006f;
+  outline: none;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.about-info {
-  padding: 0 20px; /* Adjust padding as needed */
-}
-
-.section-title h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.link {
-  color: white;
-  text-decoration: none;
-}
-
-.img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* social-icons */
-
-.social-icons li {
-  list-style: none;
-  margin-left: -30px;
-  display: flex;
-gap: 15px;
- 
-}
-
-.social-icons li a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 5px;
-
-  transition: 0.3s;
-}
-
-.social-icons li a:hover {
-  color: #000000;
-  background: #e5e5e5;
-  border-radius: 50px;
-  border: #000000;
+textarea {
+  resize: vertical;
 }
 

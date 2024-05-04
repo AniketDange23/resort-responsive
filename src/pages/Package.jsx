@@ -1,101 +1,114 @@
-import React from "react";
+import { Link } from "react-router-dom";
+
 const packages = [
   {
-    imageUrl: "/trip1.jpg",
+    image:"/package/package2.jpg",
     category: "Child (5 to 9 years)",
     price: "Rs. 600/- Per person",
-    timing: "10.00am to 6.00pm",
+    timing: "9.00am to 5.00pm",
     includes: [
       "Morning Tea & Breakfast",
       "Afternoon Lunch",
-      "Evening Tea & Snacks",
-      "Farm Tour",
-      "Sunset View",
-      "Bullock-cart Ride",
-    ],
+      "Evening Tea & Snacks"
+    ]
   },
   {
-    imageUrl: "/package.jpg",
+    image:"/package/package.jpg",
+
     category: "Olders (No Age Limit)",
     price: "Rs. 800/- Per person",
-    timing: "10.00am to 6.00pm",
+    timing: "9.00am to 5.00pm",
     includes: [
       "Morning Tea & Breakfast",
       "Afternoon Lunch",
-      "Evening Tea & Snacks",
-      "Farm Tour",
-      "Sunset View",
-      "Bullock-cart Ride",
-    ],
+      "Evening Tea & Snacks"
+    ]
   },
   {
-    imageUrl: "",
+        image:"/package/package1.jpg",
+
     category: "School Students (No Age Limit)",
     price: "Rs. 600/- Per person",
-    timing: "10.00am to 6.00pm",
+    timing: "9.00am to 5.00pm",
     includes: [
       "Morning Tea & Breakfast",
       "Afternoon Lunch",
-      "Evening Tea & Snacks",
-      "Farm Tour",
-      "Sunset View",
-      "Bullock-cart Ride",
-    ],
+      "Evening Tea & Snacks"
+    ]
   },
+  {
+        image:"/package/package3.jpg",
+
+    category: "Family (1 Day 1 Night)",
+    price: "Rs. 800/- Per person",
+    timing: "Check in Timing : 10.00am",
+    includes: [
+      "Morning Tea & Breakfast",
+      "Afternoon Lunch",
+      "Evening Tea & Snacks"
+    ]
+  },
+  {
+        image:"/package/package5.jpg",
+
+    category: "Activities",
+    timing: [
+      "9.00am to 10.00am - Tea & Breakfast",
+      "10.00am to 12.00am - Outdoor Games",
+      "12.00pm to 1.00pm - Rain Dance",
+      "1.00pm to 1.30pm - Lunch",
+      "2.00pm to 4.00pm - Bullock Cart Ride & Indoor Games",
+      "4.00pm to 5.00pm - Sunset View, River Visit, Evening Tea"
+    ]
+  }
 ];
 
 const Package = () => {
   return (
     <>
-      <div className='bradcam_area breadcam_bg '>
+      <div className="bradcam_area breadcam_bg">
         <h1>Packages</h1>
       </div>
-      <div className='container py-5'>
-        <div className=' text-center'>
-          <h1 className='mb-4 mt-5 text-center'>
-            {" "}
-            <img
-              src='/organic.gif'
-              style={{ width: "50px", mixBlendMode: "inherit" }}
-              alt=''
-            />{" "}
-            Our Packages{" "}
-            <img
-              src='/organic.gif'
-              style={{ width: "50px", mixBlendMode: "inherit" }}
-              alt=''
-            />{" "}
-          </h1>
-          <h4 className='text-center '>
-            Experience Mahuli Agro Tourism Your Gateway to Nature's Paradise
-          </h4>
+      <div>
+        <marquee>
+          <h3>Note: It is necessary to book 2,3 days before coming.</h3>
+        </marquee>
+        <h1 className="text-center py-3">Our Packages</h1>
+      </div>
+      <div className="container">
+        <div className="row justify-content-center">
+          {packages.map((pack, index) => (
+            <div key={index} className="col-lg-4 mb-4">
+              <div className="card h-100">
+                  <img
+                  src={pack.image}
+                  className="card-img-top card-hover"
+                  style={{ height: "300px" }}
+                  alt={pack.category}
+                /><div className="card-body">
+              
+                  <h5 className="card-title">{pack.category}</h5>
+                  <h2 className="card-title pricing-card-title">
+                    {pack.price}
+                  </h2>
+                  <p className="card-text">Timing: {pack.timing}</p>
+                  {pack.includes && (
+                    <ul className="list-unstyled">
+                      {pack.includes.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <Link to="/contact">
+                    <button type="button" >
+                      Book Now
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-
-        {packages.map((data, index) => (
-          <div
-            className={`row justify-content-center align-content-center py-3 ${
-              index % 2 === 0 ? "" : "flex-row-reverse"
-            }`}
-            key={index}
-          >
-            <div className='col-md-5'>
-              <img
-                src={data.imageUrl}
-                alt={data.title}
-                className='img-fluid rounded-2 shadow'
-              />
-            </div>
-            <div className='col-md-5 align-content-center'>
-              <h3 className='mx-4 mb-3'>{data.category}</h3>
-              <h6 className='mx-4 mb-3'>{data.timing}</h6>
-              <ul>
-                {data.includes.map((includes, i) => (
-                  <li key={i}>✦ {includes}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
       </div>
     </>
   );

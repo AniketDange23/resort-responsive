@@ -53,6 +53,7 @@ function Slider() {
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 textAlign: "center",
+                background: "#000000830",
                 height: "700px",
                 width: "100%",
                 objectFit: "cover",

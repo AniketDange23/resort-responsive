@@ -1,4 +1,4 @@
-import  { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import "./ImageGallery.css"; // Import CSS file for styling
 import { CgClose } from "react-icons/cg";
 
@@ -9,6 +9,15 @@ const images = [
   { src: "/gallery/image4.jpg", alt: "Image 4" },
   { src: "/gallery/image5.jpg", alt: "Image 5" },
   { src: "/gallery/image6.jpg", alt: "Image 6" },
+  { src: "/gallery/image7.jpg", alt: "Image 3" },
+  { src: "/gallery/image8.jpg", alt: "Image 4" },
+  { src: "/gallery/image9.jpg", alt: "Image 5" },
+  { src: "/gallery/image10.jpg", alt: "Image 6" },
+  { src: "/gallery/image11.jpg", alt: "Image 3" },
+  { src: "/gallery/image12.jpg", alt: "Image 4" },
+  { src: "/gallery/image13.jpg", alt: "Image 5" },
+  { src: "/gallery/image14.jpg", alt: "Image 5" },
+  { src: "/gallery/image15.jpg", alt: "Image 7" },
   // Add more images here
 ];
 
@@ -87,18 +96,22 @@ const ImageGallery = () => {
         <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4'>
           {images.map((image, index) => (
             <div key={index} className='col'>
-              <img
-                className='img-fluid rounded-2 shadow gallery-image'
-                src={image.src}
-                alt={image.alt}
+              <div
+                className='image-wrapper'
                 onClick={() => openModal(index)} // Open modal on click
-                style={{
-                  cursor: "pointer",
-                  height: "300px",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-              />
+              >
+                <img
+                  className='img-fluid rounded-2 shadow gallery-image card-hover'
+                  src={image.src}
+                  alt={image.alt}
+                  style={{
+                    cursor: "pointer",
+                    height: "300px",
+                    width: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
             </div>
           ))}
         </div>

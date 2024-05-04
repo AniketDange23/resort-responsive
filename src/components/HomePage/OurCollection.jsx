@@ -41,7 +41,7 @@ const OurCollection = () => {
             }}
           >
             {images.map((image, index) => (
-              <div className='ts-item px-2 ' key={index}>
+              <div className='ts-item px-2 card-hover ' key={index}>
                 <img
                 data-aos="fade-down"
                   src={image.src}

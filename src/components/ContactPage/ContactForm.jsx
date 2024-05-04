@@ -1,109 +1,117 @@
-import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import React, { useState } from 'react';
+import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    // Perform form submission logic here, such as sending data to backend
-    // For demonstration purposes, let's just show a success toast and reset the form
-    toast.success('Thank you for contacting us!');
-    resetForm();
-    setSubmitting(false);
+  const initialState = {
+    name: '',
+    email: '',
+    city: '',
+    phone: '',
+    message: ''
+  };
+
+  const [formData, setFormData] = useState(initialState);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      if (response.status === 200) {
+        console.log('Form submitted successfully:', response.data);
+        toast.success('Thanks for visiting!');
+        setFormData(initialState);
+        console.log(response)
+      }
+    } catch (error) {
+      console.error('Form submission failed:', error.message);
+      toast.error('Form submission failed. Please try again later.');
+    }
   };
 
   return (
-    <div className="container py-5" id='form'>
+    <div className="container py-5">
+      <h2 className="text-center mb-4">Get In Touch</h2>
       <div className="row">
-        <div className="col-lg-6 mb-3">
-          <div className="embed-responsive embed-responsive-16by9">
-            <iframe
-              title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d383131.26951719914!2d79.17425038807275!3d21.149874728454147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4db387d99039b%3A0x9a238b098f78571e!2sMahuli%20Agro%20Tourism!5e0!3m2!1sen!2sin!4v1714493879917!5m2!1sen!2sin"
-              className="embed-responsive-item"
-              allowFullScreen=""
-              loading="lazy"
-
-              width="100%" 
-              height="400px"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+        <div className="col-md-6  py-5">
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d237966.4476140934!2d78.95230241680326!3d21.26252999018951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d21.1158082!2d79.0378241!4m5!1s0x3bd4db387d99039b%3A0x9a238b098f78571e!2smahuli%20agro%20tourism!3m2!1d21.4085711!2d79.1864487!5e0!3m2!1sen!2sin!4v1714549554804!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style={{ boxShadow:"1px 1px 5px  #0000006f"}}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-        <div className="col-lg-6 px-3">
-          <ToastContainer position="bottom-right" />
-          <h2 className="contact-title mb-5">Get in Touch</h2>
-          <Formik
-            initialValues={{ name: '', email: '', contact: '', city: '', message: '' }}
-            validate={(values) => {
-              const errors = {};
-              if (!values.name) {
-                errors.name = 'Required';
-              }
-              if (!values.email) {
-                errors.email = 'Required';
-              } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-                errors.email = 'Invalid email address';
-              }
-              if (!values.contact) {
-                errors.contact = 'Required';
-              }
-              if (!values.city) {
-                errors.city = 'Required';
-              }
-              if (!values.message) {
-                errors.message = 'Required';
-              }
-              return errors;
-            }}
-            onSubmit={handleSubmit}
-          >
-            {({ isSubmitting }) => (
-              <Form className="container contact-form" noValidate>
-                <div className="row">
-                  <div className="col-sm-6 mb-4">
-                    <div className="form-group">
-                      <Field className="form-control" type="text" name="name" placeholder="Enter your name" />
-                      <ErrorMessage name="name" component="div" className="error" />
-                    </div>
-                  </div>
-                  <div className="col-sm-6 mb-4">
-                    <div className="form-group">
-                      <Field className="form-control" type="email" name="email" placeholder="Email" />
-                      <ErrorMessage name="email" component="div" className="error" />
-                    </div>
-                  </div>
-                  <div className="col-sm-6 mb-4">
-                    <div className="form-group">
-                      <Field className="form-control" type="text" name="contact" placeholder="Contact" />
-                      <ErrorMessage name="contact" component="div" className="error" />
-                    </div>
-                  </div>
-                  <div className="col-sm-6 mb-4">
-                    <div className="form-group">
-                      <Field className="form-control" type="text" name="city" placeholder="City" />
-                      <ErrorMessage name="city" component="div" className="error" />
-                    </div>
-                  </div>
-                  <div className="col-12 mb-4">
-                    <div className="form-group">
-                      <Field className="form-control" as="textarea" name="message" rows="4" placeholder="Message" />
-                      <ErrorMessage name="message" component="div" className="error" />
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-group mt-3">
-                      <button type="submit"  disabled={isSubmitting}>
-                        {isSubmitting ? 'Sending...' : 'Send'}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </Form>
-            )}
-          </Formik>
+        <div className="col-md-6 py-5">
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-control mb-3"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                className="form-control mb-3"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-control mb-3"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                placeholder="City"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="tel"
+                className="form-control mb-3"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Contact"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                className="form-control mb-3"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Message"
+                rows="6"
+                required
+              />
+            </div>
+            <button type="submit" >Submit</button>
+          </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

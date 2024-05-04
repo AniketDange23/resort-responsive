@@ -23,7 +23,7 @@ const Food = () => {
       <div className="row align-items-center">
         <div className="col-lg-6 text-center">
           <div className="about_thumb2">
-            <div className="img_2 p-2">
+            <div className="img_2 py-2">
               <img
 data-aos="zoom-in-up"
                 src="/non-veg 1.png"
@@ -32,8 +32,8 @@ data-aos="zoom-in-up"
               />
             </div>
           </div>
-          <div className="about_info">
-            <div className="section_title mb-20px">
+          <div className="card-hover">
+            <div className="section_title mb-2 py-3">
               <h3>Non-Veg Thali</h3>
             </div>
             <p>
@@ -55,7 +55,7 @@ data-aos="zoom-in-up"
             </Link>
           </div>
         </div>
-        <div className="col-lg-6 text-center px-4">
+        <div className="col-lg-6 text-center px-4 ">
           <div className="img_1 p-2">
             <img data-aos="zoom-in-down"
               src="/lunch 1.png"
@@ -63,9 +63,9 @@ data-aos="zoom-in-up"
               className="img-fluid w-75"
             />
           </div>
-          <div className="about_info">
+          <div className="card-hover">
             <div className="section_title mb-20px">
-              <h3>Veg Thali</h3>
+              <h3 >Veg Thali</h3>
             </div>
             <p>
               A veg thali is a vibrant and wholesome culinary experience that

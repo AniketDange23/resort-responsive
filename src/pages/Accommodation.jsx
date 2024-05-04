@@ -1,5 +1,4 @@
-import React from 'react'
-import Rooms from './../components/Accommodation/Rooms';
+
 
 const Accommodation = () => {
   return (

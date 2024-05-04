@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BiSolidPhoneCall } from "react-icons/bi";
-import { HiArrowUp } from "react-icons/hi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './FixedButtons.css';
+import { IoIosArrowUp } from 'react-icons/io';
 
 const FixedButtons = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,15 +38,16 @@ const FixedButtons = () => {
 
   return (
     <div>
-      <button className="fixed-btn call-btn" onClick={handleCallClick} >
+      <button className={`fixed-btn call-btn`} onClick={handleCallClick}>
         <BiSolidPhoneCall />
       </button>
 
-      {isVisible && (
-        <button className="fixed-btn back-to-top-btn" onClick={scrollToTop}>
-          <HiArrowUp />
-        </button>
-      )}
+      <button
+        className={`fixed-btn back-to-top-btn ${isVisible ? 'active' : ''}`}
+        onClick={scrollToTop}
+      >
+        <IoIosArrowUp />
+      </button>
     </div>
   );
 };
