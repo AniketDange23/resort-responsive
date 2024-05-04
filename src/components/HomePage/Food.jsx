@@ -1,11 +1,10 @@
-import React from "react";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const Food = () => {
   return (
-    <div className="container py-5">
-     <div className='text-center '>
+    <div className='container py-5'>
+      <div className='text-center '>
         <h1 className=' text-center '>
           Experience Authentic Indian Flavors Thalis
         </h1>
@@ -20,20 +19,20 @@ const Food = () => {
         </h3>
         <RiDoubleQuotesR style={{ fontSize: "40px" }} />
       </div>
-      <div className="row align-items-center">
-        <div className="col-lg-6 text-center">
-          <div className="about_thumb2">
-            <div className="img_2 py-2">
+      <div className='row align-items-center'>
+        <div className='col-lg-6 text-center'>
+          <div className='about_thumb2'>
+            <div className='img_2 py-2'>
               <img
-data-aos="zoom-in-up"
-                src="/non-veg 1.png"
-                alt="Delicious Food"
-                className="img-fluid w-75"
+                data-aos='zoom-in-up'
+                src='/food/non-veg 1.png'
+                alt='Delicious Food'
+                className='img-fluid w-75'
               />
             </div>
           </div>
-          <div className="card-hover">
-            <div className="section_title mb-2 py-3">
+          <div className='card-hover'>
+            <div className='section_title mb-2 py-3'>
               <h3>Non-Veg Thali</h3>
             </div>
             <p>
@@ -50,22 +49,23 @@ data-aos="zoom-in-up"
               cultural experience, inviting you to savor the richness of India's
               culinary heritage in every mouthful.
             </p>
-            <Link to="/contact">
-              <button >Learn More</button>
+            <Link to='/contact'>
+              <button>Learn More</button>
             </Link>
           </div>
         </div>
-        <div className="col-lg-6 text-center px-4 ">
-          <div className="img_1 p-2">
-            <img data-aos="zoom-in-down"
-              src="/lunch 1.png"
-              alt="Cooking Food"
-              className="img-fluid w-75"
+        <div className='col-lg-6 text-center px-4 '>
+          <div className='img_1 p-2'>
+            <img
+              data-aos='zoom-in-down'
+              src='/food/lunch 1.png'
+              alt='Cooking Food'
+              className='img-fluid w-75'
             />
           </div>
-          <div className="card-hover">
-            <div className="section_title mb-20px">
-              <h3 >Veg Thali</h3>
+          <div className='card-hover'>
+            <div className='section_title mb-20px'>
+              <h3>Veg Thali</h3>
             </div>
             <p>
               A veg thali is a vibrant and wholesome culinary experience that
@@ -80,8 +80,8 @@ data-aos="zoom-in-up"
               or savored at a local eatery, a veg thali promises a gastronomic
               journey that nourishes both body and soul.
             </p>
-            <Link to="/contact">
-              <button >Learn More</button>
+            <Link to='/contact'>
+              <button>Learn More</button>
             </Link>
           </div>
         </div>
