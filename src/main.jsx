@@ -1,13 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
+import ReactDOM from "react-dom/client";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JavaScript library
+
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
-// import Accommodation from "./pages/Accommodation.jsx";
 import Activities from './pages/Activities';
 import Package from "./pages/Package.jsx";
 import ImageGallery from './pages/ImageGallery';
@@ -26,10 +27,7 @@ const router = createBrowserRouter([
         element: <About />,
       },
 
-      // {
-      //   path: "/accommodation",
-      //   element: <Accommodation />,
-      // },
+
       {
         path: "/activities",
         element: <Activities />,

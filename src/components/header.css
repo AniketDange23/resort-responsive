@@ -1,31 +1,34 @@
 /* Navbar */
 /* Navbar */
 .navbar {
-  background: #114038;
+  background: #114038!important;
+
   position: sticky;
+
   top: 0;
   margin: 0;
   z-index: 1000;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-
+.navbar-brand  img{
+width: 50px;
+}
 /* Navbar Toggle Button */
 .navbar-toggler {
   background-color: transparent;
-  border: 1px solid #ecf4f3;
   padding: 10px 15px;
 }
 
 /* Navbar Links */
 .navbar-nav .nav-link {
-  margin-right: 15px;
-  font: 1rem "Raleway", sans-serif !important;
+  margin: 5px;
+  color: #d5d5d5!important;
+  padding: 8px 5px;
 
-  color: #bababa; /* Set your desired link color */
+
 }
 .navbar-nav .nav-link:hover {
-  font: 1rem "Raleway", sans-serif !important;
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
   width: max-content;
@@ -41,15 +44,15 @@
 /* Active Link */
 .navbar-nav .nav-link.active {
   width: max-content;
-
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
-  font: 600 1.2rem "lora", sans-serif; /* Set your desired active link color */
+border-bottom: 1px solid #ffffff;
+  color: #ffffff!important;
+  font: 500 1rem "for", sans-serif; /* Set your desired active link color */
 }
 
  .contact-btn{
   background: #114038;
-  border: none;
+
+  border: 1px solid #ffffff;
   border-radius: 5px;
   padding: 8px 15px;
   color: #ffffff;
@@ -60,7 +63,6 @@
 @media (min-width: 991px) {
   .navbar-nav {
     align-items: center;
-    margin-top: 10px; /* Adjust margin-top as needed */
     text-align: center;
   }
  
