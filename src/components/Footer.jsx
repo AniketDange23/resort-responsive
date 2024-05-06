@@ -43,7 +43,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="col-lg-3 col-md-6 col-sm-12 p-3 text-center">
+        <div className="col-lg-3 col-md-6 col-sm-12 p-3 ">
           <h3 className="text-white">Quick Links</h3>
           <ul className="list-unstyled">
             <li>

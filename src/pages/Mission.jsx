@@ -2,9 +2,9 @@ import React from "react";
 
 const Mission = () => {
   return (
-    <div className="container-fluid black-bg">
-      <div className="container py-5">
-        <h2 className="text-center mb-5">Our Mission & Vision</h2>
+    <div className="container-fluid  text-center black-bg">
+      <div className="container  py-5">
+        <h2 className=" mb-5">Our Mission & Vision</h2>
         <div className="row justify-content-center gap-5" data-aos="zoom-in">
           {/* Mission Card */}
           <div className="col-lg-5 col-md-8 col-sm-10 col-12 mb-3">

@@ -21,7 +21,7 @@ const Header = () => {
           <img src="/logo.png" alt="" />
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler p-"
           type="button"
           onClick={toggleNav}
         >
@@ -54,12 +54,17 @@ const Header = () => {
                 Gallery
               </Link>
             </li>
+            {/* <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`} to="/blog" onClick={closeNav}>
+                Blogs
+              </Link>
+            </li> */}
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/Contact' ? 'active' : ''}`} to="/contact" onClick={closeNav}>
                 Contact
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item px-2">
               <Link to="/contact" onClick={closeNav}>
                 <button type="button" className="contact-btn">
                   Book Now

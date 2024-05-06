@@ -1,45 +1,47 @@
+import React from 'react';
 import OwlCarousel from "react-owl-carousel";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaStar,
-  FaStarHalfAlt,
-} from "react-icons/fa";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import "./testimoinals.css";
+import './testimoinals.css'
 
 const testimonialData = [
   {
-    text: "The service at Grand View Hotel was exceptional. The staff went above and beyond to make our stay enjoyable. We highly recommend this hotel for anyone visiting the city.",
-    author: "Sarah Thomas",
+    name: "Priya Sharma",
+    content: "Visiting Mahuli Agro Tourism was an unforgettable experience! The serene surroundings and warm hospitality made our stay truly delightful. Highly recommend!",
     rating: 5,
-    userSrc: "./users/1.jpg", // Replace with image path
+    userSrc: "/users/1.jpg"
   },
   {
-    text: "We had a wonderful experience at Ocean Paradise Resort. The facilities were top-notch, the activities were fun, and the food was delicious. We will definitely be back!",
-    author: "Michael Brown",
-    rating: 3,
-    userSrc: "./users/2.jpg", // Replace with image path
+    name: "Rahul Patel",
+    content: "Our family had a fantastic time at Mahuli Agro Tourism. From exploring the farm to enjoying delicious local cuisine, every moment was memorable. Will definitely visit again!",
+    rating: 4.5,
+    userSrc: "/users/3.jpg"
   },
   {
-    text: "My visit to City Lights Museum was truly inspiring. The exhibits were well-curated and informative, and the staff was knowledgeable and friendly.",
-    author: "Jessica Jones",
-    rating: 4,
-    userSrc: "./users/3.jpg", // Replace with image path
-  },
-  {
-    text: "Learning a new skill at Tech Academy was a great decision. The instructors were patient and supportive, and I feel confident in my new abilities. Highly recommended!",
-    author: "William Lee",
+    name: "Sneha Desai",
+    content: "Mahuli Agro Tourism offers a perfect escape from the hustle and bustle of city life. The tranquil atmosphere and eco-friendly practices make it an ideal destination for nature lovers.",
     rating: 5,
-    userSrc: "./users/4.jpg", // Replace with image path
+    userSrc: "/users/2.jpg"
   },
   {
-    text: "My online shopping experience at ShopEasy was seamless. Easy navigation, great selection, and fast delivery. I'll definitely be shopping there again soon!",
-    author: "Jennifer Garcia",
-    rating: 4.2,
-    userSrc: "./users/5.jpg", // Replace with image path
+    name: "Anil Kumar",
+    content: "I was amazed by the variety of activities available at Mahuli Agro Tourism. From bullock cart rides to pottery making, there's something for everyone. A must-visit for anyone looking for an authentic rural experience.",
+    rating: 4.8,
+    userSrc: "/users/4.jpg"
   },
+  {
+    name: "Neha Singh",
+    content: "Mahuli Agro Tourism exceeded all our expectations! The staff went above and beyond to ensure we had a memorable stay. Can't wait to return!",
+    rating: 5,
+    userSrc: "/users/5.jpg"
+  },
+  {
+    name: "Alisha Gupta",
+    content: "My stay at Mahuli Agro Tourism was nothing short of magical. The picturesque surroundings, comfortable accommodations, and delicious farm-fresh meals made it a perfect getaway. Highly recommended!",
+    rating: 4.9,
+    userSrc: "/users/6.jpg"
+  }
 ];
 
 const Testimonials = () => {
@@ -47,45 +49,41 @@ const Testimonials = () => {
     <div className='container-fluid py-3 testimonial'>
       <div className='section-title container'>
         <h4>Testimonials</h4>
-        <h1
-          className='mb-5
-        '
-        >
-          What Customers Say?
-        </h1>
-        <div className='row '>
-          <div className='col-lg-12 '>
+        <h1 className='mb-5'>What Customers Say?</h1>
+        <div className='row'>
+          <div className='col-lg-12'>
             <OwlCarousel
-              className='testimonial-slider  owl-carousel owl-theme'
+              className='testimonial-slider owl-carousel owl-theme'
               loop
               autoplay
               autoplayTimeout={3000}
               dots
-              animateOut={"fadeOut"}
-              animateIn={"fadeIn"}
+              // animateOut='fadeOut'
+              // animateIn='fadeIn'
               responsive={{
-                0: { items: 1 }, // Responsive settings for devices less than 768px
-                768: { items: 1 }, // Responsive settings for devices between 768px and 992px
-                992: { items: 1 }, // Responsive settings for devices between 992px and 1200px
-                1200: { items: 2 }, // Responsive settings for devices greater than 1200px
+                0: { items: 1 },
+                768: { items: 1 },
+                992: { items: 1 },
+                1200: { items: 2 },
               }}
             >
               {testimonialData.map((testimonial, index) => (
-                <div className='testimonial-item py-2  ' key={index}>
-                  <div className=' d-flex align-items-center justify-content-center text-center mb-3 '>
+                <div className='testimonial-item py-2' key={index}>
+                  <div className='d-flex align-items-center justify-content-center text-center mb-3'>
                     <img
                       src={testimonial.userSrc}
                       alt='Testimonial Logo'
                       style={{
-                        width: "80px",
-                        height: "80px",
-                        borderRadius: "80px",
+                        width: "100px",
+                        height: "100px",
+                        borderRadius: "50%",
                         objectFit: "cover",
                       }}
                     />
                   </div>
+                  <h5>{testimonial.name}</h5>
 
-                  <p>{testimonial.text}</p>
+                  <p>{testimonial.content}</p>
                   <div className='ti-author'>
                     <div className='rating'>
                       {Array.from(
@@ -98,7 +96,6 @@ const Testimonials = () => {
                         <FaStarHalfAlt className='icon_star-half_alt text-warning' />
                       )}
                     </div>
-                    <h5>{testimonial.author}</h5>
                   </div>
                 </div>
               ))}

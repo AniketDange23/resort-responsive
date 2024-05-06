@@ -1,0 +1,53 @@
+.blog-section {
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .blog-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .blog-details {
+    padding: 20px;
+  }
+  
+  .blog-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-details p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .date, .time, .location {
+    color: #999;
+  }
+  

@@ -15,19 +15,22 @@
 
 .call-btn {
   bottom: 80px;
+  border-radius: 10px;
   font-size: 25px;
   padding: 5px 10px;
   box-shadow:  1px 2px 5px #0000004f;
 
-  background: #efefef;
+  background: #ffffff;
 }
 
 .fixed-btn:hover {
-  background-color: #e8e8e8;
+  background-color: #ffffff;
 }
 
 .back-to-top-btn {
   display: none;
+  border-radius: 10px;
+
   font-size: 28px;
   box-shadow:  1px 2px 5px #0000004f;
   padding: 2px 8px;

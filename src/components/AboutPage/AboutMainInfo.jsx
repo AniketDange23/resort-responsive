@@ -2,9 +2,9 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 const AboutMainInfo = () => {
   return (
-    <div className='container mb-3'>
+    <div className='container'>
       <div className='text-center mb-3'>
-        <h1 className=' text-center '>
+        <h1 className=' text-center mb-5 '>
           Experience Authentic Indian Flavors Thalis
         </h1>
         <RiDoubleQuotesL style={{ fontSize: "40px" }} />
@@ -48,20 +48,18 @@ const AboutMainInfo = () => {
             style={{ height: "300px", objectFit: "cover", width: "100%" }}
           />
 
-          <h4 className="mb-3">
+          <h4 className='mb-3'>
             Taste the Difference: Fresh, Flavorful, and Farm-to-Table Dining at
             Mahuli Agro Tourism!
           </h4>
           <p>
-            Embark on a culinary journey unlike any other at Mahuli Agro
-            Tourism, where every dish is a testament to our commitment to
-            freshness and quality. Situated amidst serene natural surroundings,
-            our farm-to-table dining experience offers a tantalizing array of
-            flavors that will leave you craving for more.
+            Mahuli Agro Tourism, where every dish is a testament to our
+            commitment to freshness and quality. Situated amidst serene natural
+            surroundings, our farm-to-table dining experience offers a
+            tantalizing array of flavors that will leave you craving for more.
           </p>
         </div>
       </div>
-   
     </div>
   );
 };

@@ -11,7 +11,10 @@
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+  }
+  
+  .footer svg {
+    font-size: 25px;
   }
   
   .social-icons li {

@@ -12,6 +12,8 @@ import Contact from "./pages/Contact.jsx";
 import Activities from './pages/Activities';
 import Package from "./pages/Package.jsx";
 import ImageGallery from './pages/ImageGallery';
+// import Blog from "./components/Blog.jsx";
+// import BlogDetails from "./components/BlogDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
         path: "/gallery",
         element: <ImageGallery />,
       },
+      // {
+      //   path: "/blog",
+      //   element: <Blog />,
+      // },
+      // {
+      //   path:"/blog/:index",
+      //           element: <BlogDetails />,
+      // },
       {
         path: "/contact",
         element: <Contact />,

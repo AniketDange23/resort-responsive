@@ -1,7 +1,6 @@
 import React from "react";
 import AboutSection from "../components/AboutPage/AboutSection";
 import AboutMainInfo from "./../components/AboutPage/AboutMainInfo";
-import Rooms from './../components/Accommodation/Rooms';
 
 const About = () => {
   return (
@@ -13,7 +12,6 @@ const About = () => {
 
       <AboutSection />
       <AboutMainInfo />
-      <Rooms/>
     </div>
   );
 };
