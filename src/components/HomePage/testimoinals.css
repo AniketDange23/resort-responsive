@@ -1,60 +1,50 @@
 
 .testimonial {
-    background: #e7fee1;
-
+    background: #114038;
+    color: #ffffff;
 
 }
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
-}
-
-
-
-.testimonial-slider .owl-item {
-    padding: 0 15px;
-}
-
-.testimonial-slider .ts-item {
-    background: #114038;
-
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.108);
-    transition: all 0.3s ease;
-}
-
-.testimonial-slider .ts-item:hover {
-    background: #114038;
-}
-
-.testimonial-slider .ts-item p {
-    font-size: 16px;
-    color: #ffffff;
     margin-bottom: 20px;
 }
 
-.testimonial-slider .ts-item .rating {
+
+
+
+ .testimonial-item  {
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.421);
+    transition: all 0.3s ease;
+}
+
+
+.testimonial p {
+    padding: 30px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.testimonial-slider  .rating {
     margin-bottom: 15px;
 }
 
-.testimonial-slider .ts-item .rating i {
+.testimonial-slider  .rating i {
     color: #f39c12;
 }
 
-.testimonial-slider .ts-item .ti-author {
+.testimonial-slider  .ti-author {
     margin-top: 20px;
 }
 
-.testimonial-slider .ts-item .ti-author h5 {
+.testimonial-slider  .ti-author h5 {
     font-size: 18px;
     color: #ffffff;
     margin-top: 10px;
 }
 
-.testimonial-slider .ts-item img {
+.testimonial-slider  img {
     max-width: 100px;
     margin-top: 20px;
 }

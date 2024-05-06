@@ -42,7 +42,7 @@ const OutDoor = () => {
         "Settle comfortably on the wooden cart pulled by gentle bullocks. This peaceful experience offers a delightful escape from the fast pace of modern life and transports you back to a simpler time.",
     },
     {
-      title: "Enjoy the Scenic Surroundings of the Village",
+      title: "Enjoy Surroundings of the Village",
       image: "./activities/5.png",
       icon: <GiVillage />,
 
@@ -90,7 +90,7 @@ const OutDoor = () => {
         {/* Map over the activities array to generate cards dynamically */}
         {activities.map((activity, index) => (
           <div key={index} className='col-md-4 mb-4 '>
-            <h4 className='p-2'>{activity.title}</h4>
+            <h4 className='p-2 text-center'>{activity.title}</h4>
 
             <div className='card  '>
               <img

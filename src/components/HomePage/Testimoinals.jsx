@@ -23,7 +23,7 @@ const testimonialData = [
     userSrc: "./users/2.jpg", // Replace with image path
   },
   {
-    text: "My visit to City Lights Museum was truly inspiring. The exhibits were well-curated and informative, and the staff was knowledgeable and friendly. A must-see for any art lover!",
+    text: "My visit to City Lights Museum was truly inspiring. The exhibits were well-curated and informative, and the staff was knowledgeable and friendly.",
     author: "Jessica Jones",
     rating: 4,
     userSrc: "./users/3.jpg", // Replace with image path
@@ -45,60 +45,65 @@ const testimonialData = [
 const Testimonials = () => {
   return (
     <div className='container-fluid py-3 testimonial'>
-      <div className='section-title'>
+      <div className='section-title container'>
         <h4>Testimonials</h4>
-        <h2>What Customers Say?</h2>
-      </div>
-      <div className='row'>
-        <div className='col-lg-12 '>
-          <OwlCarousel
-            className='testimonial-slider  owl-carousel owl-theme'
-            loop
-            autoplay
-            autoplayTimeout={3000}
-            dots
-            animateOut={"fadeOut"}
-            animateIn={"fadeIn"}
-            responsive={{
-              0: { items: 1 }, // Responsive settings for devices less than 768px
-              768: { items: 1 }, // Responsive settings for devices between 768px and 992px
-              992: { items: 1 }, // Responsive settings for devices between 992px and 1200px
-              1200: { items: 2 }, // Responsive settings for devices greater than 1200px
-            }}
-          >
-            {testimonialData.map((testimonial, index) => (
-              <div className='ts-item' key={index}>
-                <div className=' d-flex align-items-center justify-content-center text-center mb-3'>
-                  <img
-                    src={testimonial.userSrc}
-                    alt='Testimonial Logo'
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      borderRadius: "80px",
-                      objectFit: "cover",
-                    }}
-                  />
-                </div>
-
-                <p>{testimonial.text}</p>
-                <div className='ti-author'>
-                  <div className='rating'>
-                    {Array.from(
-                      { length: Math.floor(testimonial.rating) },
-                      (_, i) => (
-                        <FaStar key={i} className='icon_star text-warning' />
-                      )
-                    )}
-                    {testimonial.rating % 1 !== 0 && (
-                      <FaStarHalfAlt className='icon_star-half_alt text-warning' />
-                    )}
+        <h1
+          className='mb-5
+        '
+        >
+          What Customers Say?
+        </h1>
+        <div className='row '>
+          <div className='col-lg-12 '>
+            <OwlCarousel
+              className='testimonial-slider  owl-carousel owl-theme'
+              loop
+              autoplay
+              autoplayTimeout={3000}
+              dots
+              animateOut={"fadeOut"}
+              animateIn={"fadeIn"}
+              responsive={{
+                0: { items: 1 }, // Responsive settings for devices less than 768px
+                768: { items: 1 }, // Responsive settings for devices between 768px and 992px
+                992: { items: 1 }, // Responsive settings for devices between 992px and 1200px
+                1200: { items: 2 }, // Responsive settings for devices greater than 1200px
+              }}
+            >
+              {testimonialData.map((testimonial, index) => (
+                <div className='testimonial-item py-2  ' key={index}>
+                  <div className=' d-flex align-items-center justify-content-center text-center mb-3 '>
+                    <img
+                      src={testimonial.userSrc}
+                      alt='Testimonial Logo'
+                      style={{
+                        width: "80px",
+                        height: "80px",
+                        borderRadius: "80px",
+                        objectFit: "cover",
+                      }}
+                    />
                   </div>
-                  <h5>{testimonial.author}</h5>
+
+                  <p>{testimonial.text}</p>
+                  <div className='ti-author'>
+                    <div className='rating'>
+                      {Array.from(
+                        { length: Math.floor(testimonial.rating) },
+                        (_, i) => (
+                          <FaStar key={i} className='icon_star text-warning' />
+                        )
+                      )}
+                      {testimonial.rating % 1 !== 0 && (
+                        <FaStarHalfAlt className='icon_star-half_alt text-warning' />
+                      )}
+                    </div>
+                    <h5>{testimonial.author}</h5>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </OwlCarousel>
+              ))}
+            </OwlCarousel>
+          </div>
         </div>
       </div>
     </div>

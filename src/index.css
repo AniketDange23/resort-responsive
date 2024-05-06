@@ -331,16 +331,16 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  width: 100%;
-  box-shadow:  1px 1px 3px #0000006f;
+border: 1px solid #d3d3d3;
   outline: none;
   padding: 10px;
-  border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   font-size: 16px;
+  width: 100%;
 }
 
 textarea {
+  outline: none;
   resize: vertical;
 }
 
