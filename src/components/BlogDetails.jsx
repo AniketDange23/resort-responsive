@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom"; // Import useParams to access URL parameters
+import { useParams } from "react-router-dom"; 
 import blogsData from "./blogsData.js";
 
 const BlogDetails = () => {
-  const { index } = useParams(); // Retrieve the index parameter from the URL
-  const blog = blogsData[parseInt(index)]; // Get the blog data based on the index
+  const { index } = useParams(); 
+  const blog = blogsData[parseInt(index)]; 
 
   if (!blog) {
     return <div className='blog-details'>Blog not found</div>;

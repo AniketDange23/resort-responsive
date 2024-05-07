@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const packages = [
   {
-    image:"/package/package2.jpg",
+    image:"/package/package2-min.jpg",
     category: "Child (5 to 9 years)",
     price: "Rs. 600/- Per person",
     timing: "9.00am to 5.00pm",
@@ -13,7 +13,7 @@ const packages = [
     ]
   },
   {
-    image:"/package/package.jpg",
+    image:"/package/package-min.jpg",
 
     category: "Olders (No Age Limit)",
     price: "Rs. 800/- Per person",
@@ -25,7 +25,7 @@ const packages = [
     ]
   },
   {
-        image:"/package/package1.jpg",
+        image:"/package/package1-min.jpg",
 
     category: "School Students (No Age Limit)",
     price: "Rs. 600/- Per person",
@@ -37,7 +37,7 @@ const packages = [
     ]
   },
   {
-        image:"/package/package3.jpg",
+        image:"/package/package3-min.jpg",
 
     category: "Family (1 Day 1 Night)",
     price: "Rs. 800/- Per person",
@@ -49,7 +49,7 @@ const packages = [
     ]
   },
   {
-        image:"/package/package5.jpg",
+        image:"/package/package5-min.jpg",
 
     category: "Activities",
     timing: [

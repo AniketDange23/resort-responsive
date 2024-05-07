@@ -4,12 +4,14 @@ import Rooms from "./../components/Accommodation/Rooms";
 import OurCollection from "../components/HomePage/OurCollection";
 import Mission from "./Mission";
 import HomeSection from "../components/HomePage/HomeSection";
-import VideoComponent from "./../components/HomePage/VideoComponent";
+import Slider from "../components/HomePage/Slider";
+// import VideoComponent from "./../components/HomePage/VideoComponent";
 
 const Home = () => {
   return (
     <div>
-      <VideoComponent />
+      {/* <VideoComponent /> */}
+      <Slider/>
       <HomeSection />
       <Mission />
       <Rooms />

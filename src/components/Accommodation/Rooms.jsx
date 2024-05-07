@@ -4,21 +4,21 @@ const Rooms = () => {
   const rooms = [
     {
       id: 1,
-      image: "/rooms/room1.jpg",
+      image: "/rooms/room1-min.jpg",
       title: "Cottage",
       description:
         "Our traditional cottages offer a glimpse into the rich cultural heritage of Maharashtra while providing all the amenities for a comfortable stay.",
     },
     {
       id: 2,
-      image: "/rooms/room2.jpg",
+      image: "/rooms/room2-min.jpg",
       title: "Family Rooms",
       description:
         "For guests looking for a more contemporary accommodation option, our well-appointed rooms offer a blend of comfort and convenience.",
     },
     {
       id: 3,
-      image: "/rooms/room3.jpg",
+      image: "/rooms/room3-min.jpg",
       title: "Tents",
       description:
         "Traveling with a group? Our dormitory accommodations provide budget-friendly options for larger groups or backpackers.",

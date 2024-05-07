@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <nav className={`navbar navbar-expand-lg g-0 fixed-top ${isNavOpen ? 'open' : ''}`}>
       <div className="container">
-        <Link className="navbar-brand" to="#" onClick={closeNav}>
+        <Link className="navbar-brand" to="/" onClick={closeNav}>
           <img src="/logo.png" alt="" />
         </Link>
         <button

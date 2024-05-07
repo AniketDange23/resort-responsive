@@ -3,18 +3,18 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const images = [
-    { src: "/gallery/image1.jpg", alt: 'Image 1' },
-    { src: "/gallery/image2.jpg", alt: 'Image 2' },
-    { src: "/gallery/image3.jpg", alt: 'Image 3' },
-    { src: "/gallery/image4.jpg", alt: 'Image 4' },
-    { src: "/gallery/image5.jpg", alt: 'Image 5' },
-    { src: "/gallery/image6.jpg", alt: 'Image 6' },
-    { src: "/gallery/image7.jpg", alt: 'Image 7' },
-    { src: "/gallery/image8.jpg", alt: 'Image 8' },
-    { src: "/gallery/image9.jpg", alt: 'Image 9' },
-    { src: "/gallery/image10.jpg", alt: 'Image 10' },
-    { src: "/gallery/image11.jpg", alt: 'Image 11' },
-    { src: "/gallery/image12.jpg", alt: 'Image 12' },
+    { src: "/gallery/image1-min.jpg", alt: 'Image 1' },
+    { src: "/gallery/image2-min.jpg", alt: 'Image 2' },
+    { src: "/gallery/image3-min.jpg", alt: 'Image 3' },
+    { src: "/gallery/image4-min.jpg", alt: 'Image 4' },
+    { src: "/gallery/image5-min.jpg", alt: 'Image 5' },
+    { src: "/gallery/image6-min.jpg", alt: 'Image 6' },
+    { src: "/gallery/image7-min.jpg", alt: 'Image 7' },
+    { src: "/gallery/image8-min.jpg", alt: 'Image 8' },
+    { src: "/gallery/image9-min.jpg", alt: 'Image 9' },
+    { src: "/gallery/image10-min.jpg", alt: 'Image 10' },
+    { src: "/gallery/image11-min.jpg", alt: 'Image 11' },
+    { src: "/gallery/image12-min.jpg", alt: 'Image 12' },
     // Add more images here
   ];
   
