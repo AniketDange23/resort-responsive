@@ -6,7 +6,7 @@ const BlogSection = () => {
   return (
     <div className='blog-section mt'>
       <h2 className='section-title'>Latest Blogs</h2>
-      <div className='blog-grid'>
+      <div className='blog-grid container'>
         {blogsData.map((blog, index) => (
           <div className='blog-card' key={index}>
             <img src={blog.image} alt={blog.title} />

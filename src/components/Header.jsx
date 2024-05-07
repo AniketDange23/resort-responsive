@@ -54,11 +54,11 @@ const Header = () => {
                 Gallery
               </Link>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`} to="/blog" onClick={closeNav}>
                 Blogs
               </Link>
-            </li> */}
+            </li>
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/Contact' ? 'active' : ''}`} to="/contact" onClick={closeNav}>
                 Contact
