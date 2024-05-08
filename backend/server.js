@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -7,39 +6,76 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Middleware
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/contactFormDB', {
+// MongoDB Connection
+mongoose.connect('mongodb://localhost:27017/blogDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true
-});
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => console.log('Connected to MongoDB'));
-
-const contactSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  city: String,
-  phone: String,
-  message: String
+})
+.then(() => {
+  console.log('MongoDB connected successfully');
+})
+.catch((error) => {
+  console.error('MongoDB connection error:', error);
 });
 
-const Contact = mongoose.model('Contact', contactSchema);
+// Define Blog Schema
+const blogSchema = new mongoose.Schema({
+  title: String,
+  dateTime: String,
+  description: String,
+  subTitle1: String,
+  content1: String,
+  content2: String,
+  content3: String,
+  userImage: String,
+  postImage: String
+});
 
-app.post('/api/contact', async (req, res) => {
+const Blog = mongoose.model('Blog', blogSchema);
+
+// Routes
+app.post('/blogs', async (req, res) => {
   try {
-    const { name, email, city, phone, message } = req.body;
-    const newContact = new Contact({ name, email, city, phone, message });
-    await newContact.save();
-    res.sendStatus(200);
+    console.log('Received blog data:', req.body); // Debug
+    const newBlog = new Blog(req.body);
+    await newBlog.save();
+    console.log('New blog created:', newBlog);
+    res.status(201).json(newBlog);
   } catch (error) {
-    console.error('Form submission failed:', error);
-    res.sendStatus(500);
+    console.error('Error creating blog:', error.message);
+    res.status(400).json({ message: error.message });
   }
 });
 
+app.get('/blogs', async (req, res) => {
+  try {
+    const blogs = await Blog.find();
+    console.log('Blogs retrieved successfully:', blogs); // Debug
+    res.json(blogs);
+  } catch (error) {
+    console.error('Error retrieving blogs:', error.message);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+app.delete('/blogs/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Blog.findByIdAndDelete(id);
+    console.log('Blog deleted successfully'); // Debug
+    res.json({ message: 'Blog deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting blog:', error.message);
+    res.status(404).json({ message: 'Blog not found' });
+  }
+});
+
+// Start Server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

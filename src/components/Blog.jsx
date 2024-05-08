@@ -1,36 +1,41 @@
-import { Link } from "react-router-dom"; // Import Link from react-router-dom for navigation
-import "./BlogSection.css"; // Import your CSS file for styling
-import blogsData from './blogsData.js'
+import { Link } from "react-router-dom";
+import "./BlogSection.css";
+import blogsData from './blogsData.js';
+import BlogCreate from "./BlogCreate.jsx";
 
-const BlogSection = () => {
+const Blog = () => {
+  // Convert blogsData object to an array
+  const blogsArray = Object.values(blogsData);
+
   return (
-    <div className='blog-section mt'>
+    <>
+    <BlogCreate/>
+       <div className='blog-section mt'>
       <h2 className='section-title'>Latest Blogs</h2>
-      <div className='blog-grid container'>
-        {blogsData.map((blog, index) => (
+      <div className='blog-grid'>
+        {blogsArray.map((blog, index) => (
           <div className='blog-card' key={index}>
-            <img src={blog.image} alt={blog.title} />
+            <img src={blog.image} alt={blog.title} className="img-fluid" />
             <div className='blog-details'>
               <h3>{blog.title}</h3>
-              <p>{blog.content}</p>
+              <p>{blog.description}</p>
               <div className='info mb-2'>
                 <span className='date'>{blog.date}</span>
-                <span className='time'>{blog.time}</span>
-                <span className='location'>{blog.location}</span>
+                {/* Add more details if needed */}
               </div>
-              {/* Add a button to navigate to the blog details page */}
+              {/* Link to the blog details page */}
               <Link to={`/blog/${index}`}>
-                {" "}
                 <button>Read More</button>
               </Link>
             </div>
           </div>
         ))}
       </div>
-
     </div>
-    
+    </>
+   
   );
 };
 
-export default BlogSection;
+export default Blog;
+

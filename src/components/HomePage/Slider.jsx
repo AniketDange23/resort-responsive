@@ -19,7 +19,7 @@ const Slider = () => {
             <Link to="/contact" className="button-link">
               <button className="contact-button">Contact US</button>
             </Link>
-            <Link to="/contact" className="button-link">
+            <Link to="https://api.whatsapp.com/send?phone=+91 9307027399&amp;text=Hello" className="button-link">
               <button className="whatsapp-button">
                 <FaWhatsapp style={{ fontSize: "23px" }} />
               </button>
