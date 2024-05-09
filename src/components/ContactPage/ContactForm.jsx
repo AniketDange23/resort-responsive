@@ -21,7 +21,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      const response = await axios.post('http://localhost:5000/contact', formData);
       if (response.status === 200) {
         console.log('Form submitted successfully:', formData, response.data);
         toast.success('Thanks for visiting!');

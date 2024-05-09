@@ -7,14 +7,13 @@ const BlogDetails = () => {
   const blog = blogsData[parseInt(index)];
 
   if (!blog) {
-    return <div className="blog-details">Blog not found</div>;
+    return <div className='blog-details'>Blog not found</div>;
   }
 
   const {
     title,
     date,
     image,
-    PhotoGallery,
     description,
     subTitle1,
     content1,
@@ -31,15 +30,16 @@ const BlogDetails = () => {
   } = blog;
 
   return (
-    <div className="blog-details container py-5 mt">
-      <div className="blog-content">
-        <h2>{title}</h2>
+    <div className='blog-details container py-5  mt '>
+      <div className='blog-content px-3 '>
+        <h2 style={{ textAlign: "justify" }}>{title}</h2>
         <p>Date: {date}</p>
-        <div className="image-gallery">
-          <img src={image} alt="Blog Cover" className="blog-cover" />
-    
+        <div className='image-gallery'>
+          <img src={image} alt='Blog Cover' className='blog-cover' />
         </div>
-        <h4 className="py-4">{description}</h4>
+        <h5 className='py-4' style={{ textAlign: "justify" }}>
+          {description}
+        </h5>
         <h3>{subTitle1}</h3>
         <p>{content1}</p>
         <p>{content2}</p>

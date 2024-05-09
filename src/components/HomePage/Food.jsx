@@ -32,8 +32,9 @@ const Food = () => {
             </div>
           </div>
           <div>
-            <div className='section_title mb-2 py-3'>
+            <div>
               <h3>Non-Veg Thali</h3>
+              <h5 className='line'> Price- 1800 ₹ </h5>
             </div>
             <p>
               mutton thali—a true embodiment of Indian flavors. Succulent mutton
@@ -60,8 +61,9 @@ const Food = () => {
             />
           </div>
           <div>
-            <div className='section_title py-3'>
+            <div className=' py-3 '>
               <h3>Veg Thali</h3>
+              <h5 className='line text-center'> Price- 1600 ₹ </h5>
             </div>
             <p>
               Savor the colorful array of vegetarian delights with a veg thali—a

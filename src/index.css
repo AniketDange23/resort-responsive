@@ -160,6 +160,8 @@ li {
   list-style: none;
 }
 
+.mt-8{
+padding:  0 10rem;}
 p {
   font-size: 16px;
   font-weight: 400;
@@ -320,7 +322,7 @@ textarea {
 
 
 
-..blog-form {
+.blog-form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
