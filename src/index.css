@@ -93,6 +93,9 @@ b {
   height: 100%;
   padding: 120px 0px;
 }
+.card-text {
+  white-space: "-2px";
+}
 /* images gallery */
 
 .image-gallery {
