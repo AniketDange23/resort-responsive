@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 function AboutSection() {
   return (
     <>
-      <marquee>
-        <p>
+      <marquee className="bg-2">
+        <h5>
           Welcome to Mauli Agro Tourism's Farm!{" "}
-          <span> Feel the Rhythm of Rural Life.</span>
-        </p>
+           Feel the Rhythm of Rural Life.
+        </h5>
       </marquee>
       <div className='container mb-2  '>
         <div className='row'>
