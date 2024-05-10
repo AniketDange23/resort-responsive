@@ -8,7 +8,7 @@ import Blog6 from "/gallery/image6-min.jpg";
 export const blogData = {
   0: {
     title: `Sustainable Practices at Mahuli Agro Tourism: How We Care for the Land.`,
-    date: `12 May`,
+    date: `12 May 2024`,
     image: Blog1,
     PhotoGallery: Blog2,
     Blog1,
@@ -31,9 +31,9 @@ export const blogData = {
 
   1: {
     title: `Escape the Ordinary: Agritourism Adventures Await at Mahuli Agro Tourism!`,
-    date: `04 May`,
-    image: Blog3,
-    PhotoGallery: Blog4,
+    date: `11 May 2024`,
+    image: Blog2,
+    PhotoGallery: Blog3,
     Blog1,
     Blog2,
     Blog3,
@@ -54,8 +54,8 @@ export const blogData = {
 
   2: {
     title: `Planning the Perfect Agrotourism Trip: A Guide to Seasonality and Activities`,
-    date: `04 Feb`,
-    image: Blog5,
+    date: `26 April 2024`,
+    image: Blog3,
     PhotoGallery: Blog6,
     description: `Escape the urban bustle and immerse yourself in the rhythm of rural life with an agrotourism adventure! Agrotourism, or farm tourism, offers a unique opportunity to connect with nature, learn about sustainable agriculture, and savor fresh local produce. Whether you're a seasoned traveler or a curious first-timer, planning the perfect agrotourism trip requires some key considerations. This comprehensive guide will navigate you through the world of agrotourism, focusing on the importance of seasonality and the diverse activities that await you.`,
     subTitle1: `Understanding the Allure of Agrotourism`,
@@ -80,7 +80,7 @@ export const blogData = {
   3: {
     title: `Escape the Ordinary: Unwind and Reconnect with Nature in a World of Constant Connection`,
     date: `14 Feb`,
-    image: Blog5,
+    image: Blog4,
     PhotoGallery: Blog6,
     description: `The relentless hum of technology, the never-ending to-do list, the constant barrage of notifications – it's enough to make anyone crave a break. But what if the solution to the daily grind wasn't just switching off, but truly stepping away? This isn't just about taking a digital detox, though that's certainly a good first step. It's about a deeper reconnection, a return to our primal roots in the natural world.`,
     subTitle1: `Understanding the Allure of Agrotourism`,
@@ -104,7 +104,7 @@ export const blogData = {
   },
   4: {
     title: `Agro-tourism for a Sustainable Future: Learning from the Land and Nurturing Environmental Awareness`,
-    date: `25 April`,
+    date: `15 April 2024`,
     image: Blog5,
     PhotoGallery: Blog6,
     description: `The world is asking for a more sustainable future. Climate change, and environmental degradation, But amidst these concerns, a unique form of tourism is emerging as a  of hope: agro-tourism. This isn't your typical beach vacation or city sightseeing tour. Agro-tourism offers a transformative experience, inviting travelers to immerse themselves in the world of working farms and sustainable agricultural practices. It's a chance to learn where our food comes from, understand the challenges and rewards of farming, and cultivate a deeper appreciation for the environment that sustains us all.`,
@@ -131,8 +131,8 @@ export const blogData = {
   },
   5: {
     title: `Planning the Perfect Agrotourism Trip: A Guide to Seasonality and Activities`,
-    date: `04 Feb`,
-    image: Blog5,
+    date: `04 Feb 2024`,
+    image: Blog6,
     PhotoGallery: Blog6,
     description: `Escape the urban bustle and immerse yourself in the rhythm of rural life with an agrotourism adventure! Agrotourism, or farm tourism, offers a unique opportunity to connect with nature, learn about sustainable agriculture, and savor fresh local produce. Whether you're a seasoned traveler or a curious first-timer, planning the perfect agrotourism trip requires some key considerations. This comprehensive guide will navigate you through the world of agrotourism, focusing on the importance of seasonality and the diverse activities that await you.`,
     subTitle1: `Understanding the Allure of Agrotourism`,

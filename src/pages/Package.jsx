@@ -83,7 +83,7 @@ const Package = () => {
                   <img
                   src={pack.image}
                   className="card-img-top card-hover"
-                  style={{ height: "300px" }}
+                  style={{ height: "300px", objectFit:"cover" }}
                   alt={pack.category}
                 /><div className="card-body">
               

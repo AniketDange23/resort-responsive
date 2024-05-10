@@ -7,17 +7,17 @@ function AboutSection() {
   return (
     <>
       <marquee>
-        <h4>
+        <p>
           Welcome to Mauli Agro Tourism's Farm!{" "}
           <span> Feel the Rhythm of Rural Life.</span>
-        </h4>
+        </p>
       </marquee>
-      <div className='container mb-2 py-5 '>
+      <div className='container mb-2  '>
         <div className='row'>
           <div className='col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-5 order-md-1'>
             <div>
               <div className=' mb-4'>
-                <h1 className='text-start'>
+                <h1 className='text-start '>
                   Make Memories that Last at Mahuli Agro Tourism!
                 </h1>
               </div>

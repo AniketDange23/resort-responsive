@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const ContactCard = ({ icon, title, content }) => (
   <div
-    className='card border-0 shadow p-5'
+    className='card border-1 shadow p-5'
     style={{ width: "100%", height: "100%" }}
   >
-    <div className='d-flex align-items-center mb-2 d-flex flex-column text-center'>
+    <div className='d-flex align-items-center mb-2 d-flex flex-column text-center '>
       <div className='icon  mb-3 ' >{icon}</div>
       <h5 className='card-title mb-2'>{title}</h5>
       <p className='card-text '>{content}</p>
@@ -19,7 +19,7 @@ const ContactSection = () => {
     <div className='container py-5'>
       <div className='row'>
         <div className='col-lg-4 py-3 '>
-          <ContactCard
+          <ContactCard 
             icon={<FaMapMarkerAlt style={{fontSize:"30px"}} />}
             title='Address'
             content='Mahuli, Kala Fata Road, Taluka, Parshivni, Nagpur, Maharashtra 441105'

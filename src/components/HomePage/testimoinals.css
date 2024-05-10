@@ -1,6 +1,6 @@
 
 .testimonial {
-    background: #114038;
+    background: #1F6758;
     color: #ffffff;
 
 }
@@ -15,7 +15,7 @@
  .testimonial-item  {
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.421);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.371);
     transition: all 0.3s ease;
 }
 
@@ -49,3 +49,7 @@
     margin-top: 20px;
 }
 
+span{
+    color: #cecece;
+    margin-right: 10px;
+}

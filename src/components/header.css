@@ -1,18 +1,15 @@
 /* Navbar */
 /* Navbar */
 .navbar {
-  background: #114038!important;
-
+  background: #1f6758!important;
   position: sticky;
-
   top: 0;
   margin: 0;
   z-index: 1000;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand  img{
-width: 50px;
+width: 52px;
 }
 /* Navbar Toggle Button */
 .navbar-toggler {
@@ -24,7 +21,6 @@ width: 50px;
 .navbar-nav .nav-link {
   margin: 5px;
   color: #d5d5d5!important;
-  padding: 8px 5px;
 
 
 }
@@ -34,10 +30,8 @@ width: 50px;
   width: max-content;
 
 }
-.navbar-toggler span{
-  border: none !important;
-
-  color: #ffffff;
+.navbar-toggler {
+padding: 10px;
 
 }
 
@@ -46,11 +40,13 @@ width: 50px;
   width: max-content;
 border-bottom: 1px solid #ffffff;
   color: #ffffff!important;
-  font: 500 1rem "for", sans-serif; /* Set your desired active link color */
 }
-
+.navbar-expand-lg {
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
  .contact-btn{
-  background: #114038;
+  background: #1f6758;
 
   border: 1px solid #ffffff;
   border-radius: 5px;
@@ -69,8 +65,8 @@ border-bottom: 1px solid #ffffff;
 }
 @media (max-width: 991px) {
 .navbar-collapse{
-  margin-top: 10px;
-  border-top: 1px solid #ffffff;
+  margin-left: -10px;
+  margin-bottom: 10px;
 }
  
 }

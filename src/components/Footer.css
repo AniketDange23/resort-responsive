@@ -1,66 +1,95 @@
+/* General Footer Styling */
 .footer {
-    background-color: #114038;
-    color: #fff;
-  }
-  
-  .footer_top {
-    padding: 20px 0;
-  }
-  
-  .social-icons {
-    list-style: none;
-    padding: 0;
-    display: flex;
-  }
-  
-  .footer svg {
-    font-size: 25px;
-  }
-  
-  .social-icons li {
-    margin: 0 10px;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    font-size: 20px;
-  }
-  
-  .social-icons a:hover {
-    color: #ccc;
-  }
-  
-  .footer h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .footer ul {
-    padding: 0;
-    list-style: none;
-  }
-  
-  .footer ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .footer ul li a:hover {
-    color: #ccc;
-  }
-  /* Footer.css */
-.bottom-footer {
-    background-color: #114038;
-    color: #fff;
-    border-top: 1px solid #ccc;
-    text-transform: capitalize!important;
+  background-color: #1F6758;
+  color: #fff;
 }
 
-.bottom-footer b{
-    color: #fff!important;
-    text-transform: capitalize!important;
+.footer h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+
+}
+.links {
+  text-align: center;
+  padding: 20px;
+}
+.links ul li a {
+  text-align: center;
+}
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #ccc;
+}
+
+/* Social Icons */
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: safe; /* Align social icons horizontally */
+  margin-bottom: 20px; /* Add some space between social icons and footer links */
+}
+
+.social-icons li {
+  margin: 0 10px;
+  text-align: center;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .social-icons {
+      flex-wrap: wrap; /* Allow social icons to wrap to the next line if necessary */
+      justify-content: start; /* Align social icons horizontally */
+  }
+  .links {
+    text-align: start;
+  }
+  .links ul li a {
+    text-align: start;
+  }
+
+  .social-icons li {
+      margin: 10px; /* Add spacing around social icons */
+  }
+
+  .footer ul li {
+      text-align: start; /* Center-align footer links */
+  }
+}
+
+/* Bottom Footer */
+.bottom-footer {
+  background-color: #1F6758;
+  color: #fff; 
+  display: flex;
+  flex-direction: column; /* Stack content vertically on smaller screens */
+  padding: 10px 0; /* Shorten padding for smaller screens */
+
+  border-top: 1px solid #ccc;
+}
+
+.bottom-footer p {
+  color: #fff;
+  text-align: center;
 }

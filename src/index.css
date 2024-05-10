@@ -13,20 +13,15 @@
 }
 
 body {
-  font-family: "Forum", Sans-serif !important;
-  /* background: linear-gradient(
-    109.6deg,
-    rgb(255, 255, 244) 11.2%,
-    rgb(227, 233, 224) 47.5%,
-    rgb(54, 87, 59) 100.2%
-  ); */
+  font-family: "inter", Sans-serif !important;
+  background: #e7e7e7;
 }
 
 .breadcam_bg {
   background-image: url(/section.jpg);
   width: 100%;
   height: 350px;
-  padding-top: 80px ;
+  padding-top: 80px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,18 +35,17 @@ body {
   text-shadow: 3px 3px 3px #00000088;
 }
 
-.mt-7{
-  margin-top: 5rem!important;
+.mt-7 {
+  margin-top: 5rem !important;
 }
-.mt{
-  margin-top: 8rem!important;
+.mt {
+  margin-top: 8rem !important;
 }
 .mt-6 {
-  margin-top: 50rem!important;
+  margin-top: 10rem !important;
 }
-marquee  {
+marquee {
   color: #114038;
-  background: #d0d0d088;
 }
 
 @keyframes marquee {
@@ -63,16 +57,14 @@ marquee  {
   }
 }
 
-
-
 /* svg box */
 .svg-box {
   width: 120px;
   height: 120px;
   padding: 20px;
   border-radius: 100px;
-  border: 3px solid #114038;
-  color: #114038;
+  border: 3px solid #1f6758;
+  color: #1f6758;
 }
 .img {
   max-width: 100%;
@@ -111,27 +103,23 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.mt-1 {
-  top: -200px;
-}
+
 button {
   color: #ffffff;
   border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
-  background: #114038;
+  border-radius: 5px!important;
+  background: #1f6758;
+  padding: 10px;
   text-decoration: none;
-  font-family: "Lora", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 button:hover {
   background: #114038;
-  border: 1px solid #eeeeee39;
-  box-shadow: 3px 3px rgb(19, 111, 45);
-
+  /* border: 1px solid #eeeeee39; */
 }
 .icons svg {
-  color: #114038;
+  color: #1f6758;
   font-size: 20px;
   margin-right: 10px;
 }
@@ -141,7 +129,7 @@ h3,
 h4,
 h5 {
   font-family: "Lora", Sans-serif !important;
-  color: #114038;
+  color: #1f6758;
 }
 
 h3 {
@@ -151,25 +139,22 @@ h1 a,
 h2 a,
 h3 a,
 h4 a,
-h5 a,
-h6 a {
+h5 a {
   color: inherit;
 }
-
+h6 {
+  font-family: "Lora", Sans-serif !important;
+  text-align: justify;
+}
 li {
   list-style: none;
 }
 
-.mt-8{
-padding:  0 10rem;}
+.mt-8 {
+  padding: 0 10rem;
+}
 p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
-  color: #222222;
-  margin-bottom: 13px;
   text-align: justify;
-  font-family: "inter", sans-serif;
 }
 /*  */
 .room-card {
@@ -229,11 +214,10 @@ label {
   opacity: 1;
 }
 
-.black-bg{
-  background-color: #114038!important;
+.black-bg {
+  background-color: #1f6758 !important;
   color: #cac7c7;
 }
-
 
 .card {
   position: relative;
@@ -244,12 +228,7 @@ label {
   justify-content: center;
   overflow: hidden;
   perspective: 1000px;
- 
 }
-
-
-
-
 
 .card__content {
   position: absolute;
@@ -257,9 +236,9 @@ label {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  text-align: center;
   box-sizing: border-box;
-  background-color: #0000003b;
+  background-color: #00000074;
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -268,46 +247,28 @@ label {
 .card:hover .card__content {
   transform: rotateX(0deg);
 }
-.card__content{
-  text-align: center;
-}
-.card__title {
-  margin: 0;
-  display: flex;
-  padding-top: 10px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 24px;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-
-
-.card__description {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: rgb(241, 241, 241);
-  line-height: 1.4;
-}
 
 /* gallery */
 
 /*hover */
-.card-hover:hover{
+.card-hover:hover {
   transform: scale(1.05);
   transition: 0.5s;
 }
 
-
-/* form */ 
+@media (min-width: 700px) and (max-width: 1000px) {
+  .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+/* form */
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-border: 1px solid #d3d3d3;
+  border: 1px solid #d3d3d3;
   outline: none;
   padding: 10px;
   border-radius: 2px;
@@ -318,15 +279,6 @@ border: 1px solid #d3d3d3;
 textarea {
   outline: none;
   resize: vertical;
-}
-
-
-
-.blog-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 .form-group {
@@ -342,18 +294,3 @@ textarea {
   border-radius: 5px;
 }
 
-button {
-  width: max-content;
-  padding: 10px;
-  font-size: 16px;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .blog-form {
-    max-width: 90%;
-  }
-}

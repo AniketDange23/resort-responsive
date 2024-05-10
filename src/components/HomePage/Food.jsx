@@ -8,15 +8,15 @@ const Food = () => {
         <h1 className=' text-center '>
           Experience Authentic Indian Flavors Thalis
         </h1>
-        <RiDoubleQuotesL style={{ fontSize: "40px" }} />
+        <RiDoubleQuotesL style={{ fontSize: "40px" ,  }} />
 
-        <h4 className='quote_text text-center px-3'>
+        <h5 className='quote_text  px-3' style={{textAlign:"justify"}}>
           We believe in offering our guests not just a meal but a culinary
           journey through the vibrant flavors of India. Our Indian Thalis are
           carefully curated to showcase the diverse and rich tapestry of Indian
           cuisine, bringing together a symphony of tastes, aromas, and textures
           on a single platter.
-        </h4>
+        </h5>
         <RiDoubleQuotesR style={{ fontSize: "40px" }} />
       </div>
       <div className='row align-items-center'>
@@ -27,7 +27,7 @@ const Food = () => {
                 data-aos='zoom-in-up'
                 src='/food/non-veg 1.png'
                 alt='Delicious Food'
-                className='img-fluid  w-50'
+                className='img-fluid  w-75'
               />
             </div>
           </div>
@@ -57,7 +57,7 @@ const Food = () => {
               data-aos='fade-down'
               src='/food/lunch 1.png'
               alt='Cooking Food'
-              className='img-fluid  w-50'
+              className='img-fluid  w-75'
             />
           </div>
           <div>

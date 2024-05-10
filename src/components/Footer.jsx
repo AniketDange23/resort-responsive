@@ -12,17 +12,17 @@ function Footer() {
 
 
   return (
-    <>
-    <div className="container-fluid  footer text-white">
+    <div className="container-fluid footer">
+    <div className="container text-white py-5">
       <div className="row justify-content-center">
-        <div className="col-lg-3 col-md-6 col-sm-12 p-3 text-center">
-          <img src="/logo.png" alt="" style={{ width: "100px" }} />
+        <div className="col-lg-4 col-md-6 col-sm-12 ">
+          <img src="/logo.png" alt="footer" className="mb-3" style={{ width: "100px" }} />
           <p className="text-white py-2">
             Embrace nature's bounty at Mahuli Agro Tourism. Where every moment
             is a harvest of serenity.
           </p>
-          <div className="">
-            <h4 className="text-white text-center">Social Links</h4>
+          <div>
+            <h4 className="text-white  mb-3">Social Links</h4>
             <ul className="social-icons  ">
               <li>
                 <a href="https://www.facebook.com/people/Mahuli-Agro-Tourism/100089468910050/">
@@ -43,9 +43,9 @@ function Footer() {
           </div>
         </div>
 
-        <div className="col-lg-3 col-md-6 col-sm-12 p-3 ">
-          <h3 className="text-white">Quick Links</h3>
-          <ul className="list-unstyled">
+        <div className="col-lg-4 col-md-6 col-sm-12 links ">
+          <h3 className="text-white ">Quick Links</h3>
+          <ul >
             <li>
               <Link
                 className={`nav-link ${
@@ -109,7 +109,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col-lg-3 col-md-6 col-sm-12 p-3 ">
+        <div className="col-lg-4 col-md-6 col-sm-12  ">
           <h3 className="text-white">Address</h3>
           <ul className="list-unstyled">
             <li>
@@ -137,12 +137,12 @@ function Footer() {
      
     </div>
     <div className="container-fluid bottom-footer">
-      <div className="col-lg-12  text-center py-2">
-      <b>       COPYRIGHT © {currentYear} ALL RIGHTS RESERVED THIS WEBSITE DESIGN AND DEVELOPED BY ANIKET DANGE.
-</b>
+      <div className="col-lg-12 ">
+      <p>       COPYRIGHT © {currentYear} ALL RIGHTS RESERVED THIS WEBSITE DESIGN AND DEVELOPED BY <b> ANIKET DANGE</b>.
+</p>
       </div>
     </div>
-      </>
+      </div>
   );
 }
 

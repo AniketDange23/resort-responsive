@@ -21,7 +21,7 @@ const AboutMainInfo = () => {
 
       <div className='row'>
         <div className='col-xl-6 col-md-6'>
-          <div className='single_about_info'>
+          <div className='single_about_info '>
             <img
               src='./food/food6.jpg'
               alt='image 1'

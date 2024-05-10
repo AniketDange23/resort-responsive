@@ -24,8 +24,8 @@ const Header = () => {
         <Link className='navbar-brand' to='/' onClick={closeNav}>
           <img src='/logo.png' alt='' />
         </Link>
-        <button className='navbar-toggler p-' type='button' onClick={toggleNav}>
-          <FaBars className='text-white' />
+        <button className='navbar-toggler px-3 py-2 ' onClick={toggleNav}>
+          <FaBars className=" text-white"  />
         </button>
         <div
           className={`collapse navbar-collapse align-content-center m0 justify-content-end ${

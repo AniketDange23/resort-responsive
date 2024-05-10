@@ -88,7 +88,7 @@ const ImageGallery = () => {
 
   return (
     <>
-      <div className='bradcam_area breadcam_bg '>
+      <div className='bradcam_area breadcam_bg  '>
         <h1>Our Gallery</h1>
       </div>
       <div className='container py-3'>
@@ -101,7 +101,7 @@ const ImageGallery = () => {
                 onClick={() => openModal(index)} // Open modal on click
               >
                 <img
-                  className='img-fluid rounded-2 shadow gallery-image card-hover'
+                  className='img-fluid rounded-2 shadow  card-hover'
                   src={image.src}
                   alt={image.alt}
                   style={{
@@ -126,7 +126,7 @@ const ImageGallery = () => {
                 <CgClose />{" "}
               </span>
 
-              <div className='modal-image-container' ref={imageRef}>
+              <div className='modal-image-container ' ref={imageRef}>
                 <img
                   src={images[selectedImageIndex].src}
                   alt={images[selectedImageIndex].alt}

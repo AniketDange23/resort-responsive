@@ -1,4 +1,3 @@
-import React from "react";
 import AboutSection from "../components/AboutPage/AboutSection";
 import AboutMainInfo from "./../components/AboutPage/AboutMainInfo";
 

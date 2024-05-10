@@ -11,7 +11,7 @@ const Slider = () => {
         </div>
         <div className="col-md-4 d-flex justify-content-center align-content-center   text-center slider-content ">
         <div className="py-3 bg  ">
-            <h1 className="mb-3 pt-3 px-2">माहुलीचा परिसस्पर्श, मनाचे समाधान!</h1>
+            <h1 className="mb-3 pt-3 px-2 title">माहुलीचा परिसस्पर्श, मनाचे समाधान!</h1>
           <h6 className="descriptions px-3">
             निसर्गरम्य वातावरणाचा आजच अनुभव घ्या माहुली ऍग्रो टुरिझम या
           </h6> <div className="buttons text-center justify-content-center">

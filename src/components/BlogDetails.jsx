@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import blogsData from "./blogsData.js";
-import "./BlogSection.css"; // Import your CSS file for styling
 
 const BlogDetails = () => {
   const { index } = useParams();
@@ -30,16 +29,15 @@ const BlogDetails = () => {
   } = blog;
 
   return (
-    <div className='blog-details container py-5  mt '>
-      <div className='blog-content px-3 '>
-        <h2 style={{ textAlign: "justify" }}>{title}</h2>
+    <div className='blog-details container py-5 mt'>
+      <div className='blog-content'>
+        <h2 className='title'>{title}</h2>
         <p>Date: {date}</p>
-        <div className='image-gallery'>
-          <img src={image} alt='Blog Cover' className='blog-cover' />
+        <div className=' text-center'>
+          <img src={image} alt='Blog Cover' className="w-75 h-100" />
         </div>
-        <h5 className='py-4' style={{ textAlign: "justify" }}>
-          {description}
-        </h5>
+        <h6 className='py-4'>{description}
+        </h6>
         <h3>{subTitle1}</h3>
         <p>{content1}</p>
         <p>{content2}</p>
