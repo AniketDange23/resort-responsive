@@ -73,11 +73,11 @@ marquee {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-.bg-1 {
-  width: 100px;
-  bottom: 0;
-  position: absolute;
-  z-index: inherit;
+.bg-2{
+ font: medium 1rem "Forum", sans-serif;
+padding: 5px ; 
+  background: #1f6758;
+  color: #ffffff;
 }
 
 b {
@@ -85,13 +85,21 @@ b {
   color: #ffffff !important;
   text-align: justify;
 }
+.set-bg-choose{
 
+  background: url(/section.jpg) fixed 50% 50%;
+  background-size: cover;
+  padding: 120px 0px;
+}
 /* images gallery */
 
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
+}
+.bg-blur{
+  backdrop-filter: blur(5px);
 }
 
 .image-item img {
@@ -247,7 +255,10 @@ label {
 .card:hover .card__content {
   transform: rotateX(0deg);
 }
-
+.card-text{
+  text-align: justify !important;
+  word-spacing:-1dvw !important;
+}
 /* gallery */
 
 /*hover */

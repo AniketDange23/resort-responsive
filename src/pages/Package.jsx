@@ -70,8 +70,8 @@ const Package = () => {
         <h1>Packages</h1>
       </div>
       <div>
-        <marquee>
-          <h3>Note: It is necessary to book 2,3 days before coming.</h3>
+        <marquee className="bg-2" >
+          <h3 >Note: It is necessary to book 2,3 days before coming.</h3>
         </marquee>
         <h1 className="text-center py-3">Our Packages</h1>
       </div>
