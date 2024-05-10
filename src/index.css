@@ -255,10 +255,10 @@ label {
 .card:hover .card__content {
   transform: rotateX(0deg);
 }
-.card-text{
+/* .card-text{
   text-align: justify !important;
   word-spacing:-1dvw !important;
-}
+} */
 /* gallery */
 
 /*hover */
