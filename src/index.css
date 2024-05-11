@@ -94,8 +94,7 @@ b {
   padding: 120px 0px;
 }
 .card-text {
-  white-space: "-2px";
-}
+word-spacing: -1px;}
 /* images gallery */
 
 .image-gallery {

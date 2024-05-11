@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useRef, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const initialState = {
@@ -11,28 +11,40 @@ const ContactForm = () => {
     phone: '',
     message: ''
   };
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log('Form Data:', formData);
+
+    emailjs
+      .sendForm('service_5tuk0tn', 'template_1rn18rp', form.current, {
+        publicKey: 'AXe7bnLYvNH3helO1',
+      })
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          // Show success toast
+          toast.success('Form submitted successfully!', {
+          });
+          // Reset form data
+          setFormData(initialState);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          // Show error toast
+          toast.error('Failed to submit form. Please try again later.', {
+          });
+        },
+      );
+  };
+  
   const [formData, setFormData] = useState(initialState);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:5000/contact', formData);
-      if (response.status === 200) {
-        console.log('Form submitted successfully:', formData, response.data);
-        toast.success('Thanks for visiting!');
-        setFormData(initialState);
-        console.log(response)
-      }
-    } catch (error) {
-      console.error('Form submission failed:', error.message);
-      toast.error('Form submission failed. Please try again later.');
-    }
-  };
 
   return (
     <div className="container py-5">
@@ -51,11 +63,11 @@ const ContactForm = () => {
           ></iframe>
         </div>
         <div className="col-md-6 py-5">
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="form-group row">
-            <h3 className='text-center mb-4'>Contact Form</h3>
+              <h3 className='text-center mb-4'>Contact Form</h3>
               <div className="col-sm mb-3">
-              <label >Name</label>
+                <label>Name</label>
                 <input
                   type="text"
                   name="name"
@@ -66,8 +78,7 @@ const ContactForm = () => {
                 />
               </div>
               <div className="col-sm mb-3">
-              <label >Email</label>
-
+                <label>Email</label>
                 <input
                   type="email"
                   name="email"
@@ -80,8 +91,7 @@ const ContactForm = () => {
             </div>
             <div className="form-group row">
               <div className="col-sm mb-3">
-              <label >Contact </label>
-
+                <label>Contact </label>
                 <input
                   type="tel"
                   name="phone"
@@ -92,23 +102,21 @@ const ContactForm = () => {
                 />
               </div>
               <div className="col-sm mb-3">
-              <label >City</label>
-
+                <label>City</label>
                 <input
                   type="text"
                   name="city"
                   value={formData.city}
                   onChange={handleChange}
-                  placeholder="Enter your Ctiy "
+                  placeholder="Enter your City "
                   required
                 />
               </div>
             </div>
             <div className="form-group">
-            <label >Massage</label>
-
+              <label>Message</label>
               <textarea
-                className=" mb-3"
+                className="form-control mb-3"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
@@ -117,7 +125,7 @@ const ContactForm = () => {
                 required
               />
             </div>
-            <button type="submit" >Submit</button>
+            <button type="submit" className="btn btn-primary">Submit</button>
           </form>
         </div>
       </div>
